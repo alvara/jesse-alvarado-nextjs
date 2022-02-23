@@ -1,12 +1,14 @@
 // display individual blog post
+import groq from 'groq'
 import client from '../../client'
 
 const Blog = (props) => {
-  const { title = 'Missing title', author = 'Missing name' } = props.post
+  const { title, author, categories } = props.post
   return (
     <article>
       <h1>{title}</h1>
-      <span>By {author}</span>
+      <div>By {author}</div>
+      <div>{categories}</div>
     </article>
   )
 }
@@ -22,16 +24,17 @@ export async function getStaticPaths() {
   }
 }
 
+// Create query from Sanity
+const query = groq`*[_type == "post" && slug.current == $slug][0]{
+  title,
+  "author": author->name,
+  "categories": categories[]->title
+}`
+
 export async function getStaticProps(context) {
-  // It's important to default the slug so that it doesn't return "undefined"
+  // default empty slug so that it doesn't return "undefined"
   const { slug = "" } = context.params
-  const post = await client.fetch(`
-    *[_type == "post" && slug.current == $slug][0]
-    {
-      title, 
-      "author": author->name
-    }
-  `, { slug })
+  const post = await client.fetch(query, { slug })
   return {
     props: {
       post
