@@ -5,9 +5,10 @@ import {PortableText} from '@portabletext/react'
 import client from '../../client'
 import getSanityImgUrl from '../../utils/getSanityImgUrl'
 
+
 const ptComponents = {
   types: {
-    image: ({ value }) => {
+    figure: ({ value }) => {
       if (!value?.asset?._ref) {
         return null
       }
