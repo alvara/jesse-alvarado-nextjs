@@ -18,7 +18,7 @@ const Blog = (props) => {
 
       {authorImg && (
         <div>
-          <img src={getSanityImgPath(client, authorImg).width(150).url()}/>
+          <img src={getSanityImgPath(authorImg).width(150).url()}/>
         </div>
       )}
     </article>
