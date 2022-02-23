@@ -15,7 +15,6 @@ import author from './documents/author';
 // Object types
 import cta from './objects/cta';
 import embedHTML from './objects/embedHTML';
-import figure from './objects/figure';
 import internalLink from './objects/internalLink';
 import link from './objects/link';
 import portableText from './objects/portableText';
@@ -37,7 +36,6 @@ export default createSchema({
     category,
     cta,
     embedHTML,
-    figure,
     hero,
     imageSection,
     internalLink,

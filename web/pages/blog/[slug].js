@@ -1,10 +1,29 @@
 // display individual blog post
 import groq from 'groq'
+import {PortableText} from '@portabletext/react'
+
 import client from '../../client'
-import getSanityImgPath from '../../utils/getSanityImgUrl'
+import getSanityImgUrl from '../../utils/getSanityImgUrl'
+
+const ptComponents = {
+  types: {
+    image: ({ value }) => {
+      if (!value?.asset?._ref) {
+        return null
+      }
+      return (
+        <img
+          alt={value.alt || ' '}
+          loading="lazy"
+          src={getSanityImgUrl(value).width(320).height(240).fit('max').auto('format')}
+        />
+      )
+    }
+  }
+}
 
 const Blog = (props) => {
-  const { title, author, authorImg, categories } = props.post
+  const { title, author, authorImg, categories, content } = props.post
   return (
     <article>
       <h1>{title}</h1>
@@ -18,9 +37,14 @@ const Blog = (props) => {
 
       {authorImg && (
         <div>
-          <img src={getSanityImgPath(authorImg).width(150).url()}/>
+          <img src={getSanityImgUrl(authorImg).width(150).url()}/>
         </div>
       )}
+
+      <PortableText
+        value={content}
+        components={ptComponents}
+      />
     </article>
   )
 }
@@ -41,7 +65,8 @@ const query = groq`*[_type == "post" && slug.current == $slug][0]{
   title,
   "author": author->name,
   "categories": categories[]->title,
-  "authorImg": author->image
+  "authorImg": author->image,
+  content
 }`
 
 export async function getStaticProps(context) {
