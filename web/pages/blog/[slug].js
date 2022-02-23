@@ -1,9 +1,10 @@
 // display individual blog post
 import groq from 'groq'
 import client from '../../client'
+import getSanityImgPath from '../../utils/getSanityImgUrl'
 
 const Blog = (props) => {
-  const { title, author, categories } = props.post
+  const { title, author, authorImg, categories } = props.post
   return (
     <article>
       <h1>{title}</h1>
@@ -13,6 +14,12 @@ const Blog = (props) => {
         <ul>
           {categories.map(category => <li key={category}>{category}</li>)}
         </ul>
+      )}
+
+      {authorImg && (
+        <div>
+          <img src={getSanityImgPath(client, authorImg).width(150).url()}/>
+        </div>
       )}
     </article>
   )
@@ -33,7 +40,8 @@ export async function getStaticPaths() {
 const query = groq`*[_type == "post" && slug.current == $slug][0]{
   title,
   "author": author->name,
-  "categories": categories[]->title
+  "categories": categories[]->title,
+  "authorImg": author->image
 }`
 
 export async function getStaticProps(context) {
