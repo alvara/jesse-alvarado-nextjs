@@ -8,7 +8,12 @@ const Blog = (props) => {
     <article>
       <h1>{title}</h1>
       <div>By {author}</div>
-      <div>{categories}</div>
+
+      {categories && (
+        <ul>
+          {categories.map(category => <li key={category}>{category}</li>)}
+        </ul>
+      )}
     </article>
   )
 }
