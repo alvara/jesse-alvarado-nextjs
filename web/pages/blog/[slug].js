@@ -2,11 +2,11 @@
 import client from '../../client'
 
 const Blog = (props) => {
-  const { title = 'Missing title', name = 'Missing name' } = props.post
+  const { title = 'Missing title', author = 'Missing name' } = props.post
   return (
     <article>
       <h1>{title}</h1>
-      <span>By {name}</span>
+      <span>By {author}</span>
     </article>
   )
 }
@@ -29,7 +29,7 @@ export async function getStaticProps(context) {
     *[_type == "post" && slug.current == $slug][0]
     {
       title, 
-      "name": author->name
+      "author": author->name
     }
   `, { slug })
   return {
