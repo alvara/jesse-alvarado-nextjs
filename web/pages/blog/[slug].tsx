@@ -7,6 +7,7 @@ import PropTypes from "prop-types"
 import PostLayout from "../../modules/layouts/postLayout"
 import client from '../../client'
 import getSanityImgUrl from '../../utils/getSanityImgUrl'
+import Head from 'next/head'
 
 const ptComponents = {
   types: {
@@ -19,38 +20,44 @@ const ptComponents = {
           alt={value.alt || ' '}
           loading="lazy"
           src={getSanityImgUrl(value).width(320).height(240).fit('max').auto('format').url()}
-        />
-      )
-    }
-  }
+          />
+          )
+        }
+      }
 }
 
 const Post = (props) => {
   const post = props.post
   return (
-    <article>
-      <h1>{post?.title}</h1>
-      <div>By {post?.author}</div>
+    <>
+      <Head>
+        <title>{post.title}</title>
+        {/* TODO: add description to schema and insert here for each post */}
+      </Head>
+      <article>
+        <h1>{post?.title}</h1>
+        <div>By {post?.author}</div>
 
-      {post?.categories && (
-        <ul>
-          {post?.categories.map(category => <li key={category}>{category}</li>)}
-        </ul>
-      )}
+        {post?.categories && (
+          <ul>
+            {post?.categories.map(category => <li key={category}>{category}</li>)}
+          </ul>
+        )}
 
-      {post?.authorImg && (
-        <div>
-          <img src={getSanityImgUrl(post?.authorImg).width(150).url()} alt='author'/>
-        </div>
-      )}
+        {post?.authorImg && (
+          <div>
+            <img src={getSanityImgUrl(post?.authorImg).width(150).url()} alt='author'/>
+          </div>
+        )}
 
-    {post?.content && (
-      <PortableText
-        value={post.content}
-        components={ptComponents}
-      />
-      )}
-    </article>
+      {post?.content && (
+        <PortableText
+          value={post.content}
+          components={ptComponents}
+        />
+        )}
+      </article>
+    </>
   )
 }
 
