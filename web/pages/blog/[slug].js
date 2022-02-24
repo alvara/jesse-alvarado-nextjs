@@ -1,6 +1,7 @@
 // display individual blog post
 import groq from 'groq'
 import {PortableText} from '@portabletext/react'
+import PropTypes from "prop-types";
 
 import client from '../../client'
 import getSanityImgUrl from '../../utils/getSanityImgUrl'
@@ -8,7 +9,7 @@ import getSanityImgUrl from '../../utils/getSanityImgUrl'
 
 const ptComponents = {
   types: {
-    figure: ({ value }) => {
+    figure: ({value}) => {
       if (!value?.asset?._ref) {
         return null
       }
@@ -24,7 +25,7 @@ const ptComponents = {
 }
 
 const Blog = (props) => {
-  const { title, author, authorImg, categories, content } = props.post
+  const {title, author, authorImg, categories, content} = props.post
   return (
     <article>
       <h1>{title}</h1>
@@ -50,6 +51,15 @@ const Blog = (props) => {
   )
 }
 
+Blog.propTypes = {
+  post: PropTypes.object,
+  title: PropTypes.string,
+  author: PropTypes.string,
+  authorImg: PropTypes.string,
+  categories: PropTypes.arrayOf(PropTypes.string),
+  content: PropTypes.string
+};
+
 export async function getStaticPaths() {
   const paths = await client.fetch(
     `*[_type == "post" && defined(slug.current)][].slug.current`
@@ -72,8 +82,8 @@ const query = groq`*[_type == "post" && slug.current == $slug][0]{
 
 export async function getStaticProps(context) {
   // default empty slug so that it doesn't return "undefined"
-  const { slug = "" } = context.params
-  const post = await client.fetch(query, { slug })
+  const {slug = ""} = context.params
+  const post = await client.fetch(query, {slug})
   return {
     props: {
       post
