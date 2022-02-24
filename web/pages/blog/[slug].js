@@ -26,6 +26,7 @@ const ptComponents = {
 
 const Blog = (props) => {
   const {title, author, authorImg, categories, content} = props.post
+  console.log(authorImg)
   return (
     <article>
       <h1>{title}</h1>
@@ -39,7 +40,7 @@ const Blog = (props) => {
 
       {authorImg && (
         <div>
-          <img src={getSanityImgUrl(authorImg).width(150).url()}/>
+          <img src={getSanityImgUrl(authorImg).width(150).url()} alt='author'/>
         </div>
       )}
 
