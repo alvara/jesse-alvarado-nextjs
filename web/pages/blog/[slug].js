@@ -1,51 +1,54 @@
 // display individual blog post
 import groq from 'groq'
-import {PortableText} from '@portabletext/react'
+// import {PortableText} from '@portabletext/react'
 import PropTypes from "prop-types"
 
 import client from '../../client'
 import getSanityImgUrl from '../../utils/getSanityImgUrl'
 
-const ptComponents = {
-  types: {
-    figure: ({value}) => {
-      if (!value?.asset?._ref) {
-        return null
-      }
-      return (
-        <img
-          alt={value.alt || ' '}
-          loading="lazy"
-          src={getSanityImgUrl(value).width(320).height(240).fit('max').auto('format')}
-        />
-      )
-    }
-  }
-}
+// const ptComponents = {
+//   types: {
+//     figure: ({value}) => {
+//       if (!value?.asset?._ref) {
+//         return null
+//       }
+//       return (
+//         <img
+//           alt={value.alt || ' '}
+//           loading="lazy"
+//           src={getSanityImgUrl(value).width(320).height(240).fit('max').auto('format')}
+//         />
+//       )
+//     }
+//   }
+// }
 
 const Post = (props) => {
-  const {title, author, authorImg, categories, content} = props.post
+  // const {title = '', author = '', authorImg = '', categories = []} = props.post
+  const post = props.post
   return (
     <article>
-      <h1>{title}</h1>
-      <div>By {author}</div>
+      <h1>{post?.title}</h1>
+      <div>By {post?.author}</div>
 
-      {categories && (
+      {post?.categories && (
         <ul>
-          {categories.map(category => <li key={category}>{category}</li>)}
+          {post?.categories.map(category => <li key={category}>{category}</li>)}
         </ul>
       )}
 
-      {authorImg && (
+      {post?.authorImg && (
         <div>
-          <img src={getSanityImgUrl(authorImg).width(150).url()} alt='author'/>
+          <img src={getSanityImgUrl(post?.authorImg).width(150).url()} alt='author'/>
         </div>
       )}
 
-      <PortableText
+
+      {/* <PortableText
         value={content}
         components={ptComponents}
-      />
+      /> */}
+
     </article>
   )
 }
@@ -55,8 +58,8 @@ Post.propTypes = {
   title: PropTypes.string,
   author: PropTypes.string,
   authorImg: PropTypes.string,
-  categories: PropTypes.arrayOf(PropTypes.string),
-  content: PropTypes.string
+  categories: PropTypes.arrayOf(PropTypes.string)
+  // content: PropTypes.string
 };
 
 export async function getStaticPaths() {

@@ -6,6 +6,7 @@ import client from '../client'
 
 // view all blog posts
 const Blog = ({posts}) => {
+
   return (
     <div>
       <p>Blog</p>
