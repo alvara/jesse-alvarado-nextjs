@@ -11,7 +11,7 @@ const Index = ({posts}) => {
       <p>Welcome!</p>
 
       {posts.length > 0 && posts.map(
-          ({_id, title = '', slug = '', publishedAt = ''}) =>
+          ({_id, title = '', slug, publishedAt = ''}) =>
             slug && (
               <li key={_id}>
                 <Link href="/blog/[slug]" as={`/blog/${slug.current}`}>
