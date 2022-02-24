@@ -1,4 +1,5 @@
 // Layout for individual blog posts
+import PropTypes from "prop-types"
 
 import Navbar from '../../common/navbar'
 import Footer from '../../common/footer'
@@ -13,3 +14,7 @@ export default function PostLayout({children}) {
     </>
   )
 }
+
+PostLayout.propTypes = {
+  children: PropTypes.node.isRequired,
+};
