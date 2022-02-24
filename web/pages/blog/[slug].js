@@ -1,30 +1,29 @@
 // display individual blog post
 import groq from 'groq'
-// import {PortableText} from '@portabletext/react'
+import {PortableText} from '@portabletext/react'
 import PropTypes from "prop-types"
 
 import client from '../../client'
 import getSanityImgUrl from '../../utils/getSanityImgUrl'
 
-// const ptComponents = {
-//   types: {
-//     figure: ({value}) => {
-//       if (!value?.asset?._ref) {
-//         return null
-//       }
-//       return (
-//         <img
-//           alt={value.alt || ' '}
-//           loading="lazy"
-//           src={getSanityImgUrl(value).width(320).height(240).fit('max').auto('format')}
-//         />
-//       )
-//     }
-//   }
-// }
+const ptComponents = {
+  types: {
+    figure: ({value}) => {
+      if (!value?.asset?._ref) {
+        return null
+      }
+      return (
+        <img
+          alt={value.alt || ' '}
+          loading="lazy"
+          src={getSanityImgUrl(value).width(320).height(240).fit('max').auto('format')}
+        />
+      )
+    }
+  }
+}
 
 const Post = (props) => {
-  // const {title = '', author = '', authorImg = '', categories = []} = props.post
   const post = props.post
   return (
     <article>
@@ -43,12 +42,12 @@ const Post = (props) => {
         </div>
       )}
 
-
-      {/* <PortableText
-        value={content}
+    {post?.content && (
+      <PortableText
+        value={post.content}
         components={ptComponents}
-      /> */}
-
+      />
+      )}
     </article>
   )
 }
@@ -58,8 +57,8 @@ Post.propTypes = {
   title: PropTypes.string,
   author: PropTypes.string,
   authorImg: PropTypes.string,
-  categories: PropTypes.arrayOf(PropTypes.string)
-  // content: PropTypes.string
+  categories: PropTypes.arrayOf(PropTypes.string),
+  content: PropTypes.arrayOf(PropTypes.object)
 };
 
 export async function getStaticPaths() {
