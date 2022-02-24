@@ -24,7 +24,7 @@ const ptComponents = {
   }
 }
 
-const Blog = (props) => {
+const Post = (props) => {
   const {title, author, authorImg, categories, content} = props.post
   return (
     <article>
@@ -51,7 +51,7 @@ const Blog = (props) => {
   )
 }
 
-Blog.propTypes = {
+Post.propTypes = {
   post: PropTypes.object,
   title: PropTypes.string,
   author: PropTypes.string,
@@ -91,4 +91,4 @@ export async function getStaticProps(context) {
   }
 }
 
-export default Blog
+export default Post
