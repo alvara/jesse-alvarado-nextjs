@@ -8,7 +8,6 @@ export default function MainLayout({children}) {
   return (
     <>
       <Navbar/>
-      From Main layout!
       <main>{children}</main>
       <Footer />
     </>
