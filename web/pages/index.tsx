@@ -1,11 +1,12 @@
+import type {ReactElement} from 'react'
 import Link from 'next/link'
 import groq from 'groq'
 import PropTypes from "prop-types"
 import client from '../client'
+import MainLayout from '../modules/layouts/mainLayout'
 
 // index.js
-const Index = ({posts}) => {
-
+export default function Index({posts}) {
   return (
     <div>
       <p>Welcome!</p>
@@ -25,6 +26,15 @@ const Index = ({posts}) => {
   )
 }
 
+// Get the main template for standard pages
+Index.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <MainLayout>
+      {page}
+    </MainLayout>
+  )
+}
+
 Index.propTypes = {
   posts : PropTypes.object
 }
@@ -33,11 +43,10 @@ export async function getStaticProps() {
   const posts = await client.fetch(groq`
     *[_type == "post" && publishedAt < now()][0..2] | order(publishedAt desc)
   `)
+
   return {
     props: {
       posts
     }
   }
 }
-
-export default Index;

@@ -1,8 +1,10 @@
 // display individual blog post
+import {ReactElement} from 'react'
 import groq from 'groq'
 import {PortableText} from '@portabletext/react'
 import PropTypes from "prop-types"
 
+import PostLayout from "../../modules/layouts/postLayout"
 import client from '../../client'
 import getSanityImgUrl from '../../utils/getSanityImgUrl'
 
@@ -49,6 +51,15 @@ const Post = (props) => {
       />
       )}
     </article>
+  )
+}
+
+// Get the main template for standard pages
+Post.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <PostLayout>
+      {page}
+    </PostLayout>
   )
 }
 

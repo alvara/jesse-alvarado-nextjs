@@ -1,8 +1,10 @@
+import type {ReactElement} from 'react'
 import Link from 'next/link'
 import groq from 'groq'
 import PropTypes from "prop-types"
 
 import client from '../client'
+import MainLayout from '../modules/layouts/mainLayout'
 
 // view all blog posts
 const Blog = ({posts}) => {
@@ -26,9 +28,20 @@ const Blog = ({posts}) => {
   )
 }
 
+// Get the main template for standard pages
+Blog.getLayout = function getLayout(page: ReactElement) {
+  return (
+    <MainLayout>
+      {page}
+    </MainLayout>
+  )
+}
+
 Blog.propTypes = {
   posts: PropTypes.object,
 };
+
+
 
 
 export async function getStaticProps() {
