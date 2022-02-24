@@ -26,7 +26,6 @@ const ptComponents = {
 
 const Blog = (props) => {
   const {title, author, authorImg, categories, content} = props.post
-  console.log(authorImg)
   return (
     <article>
       <h1>{title}</h1>
