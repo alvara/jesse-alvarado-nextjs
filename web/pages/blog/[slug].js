@@ -1,11 +1,10 @@
 // display individual blog post
 import groq from 'groq'
 import {PortableText} from '@portabletext/react'
-import PropTypes from "prop-types";
+import PropTypes from "prop-types"
 
 import client from '../../client'
 import getSanityImgUrl from '../../utils/getSanityImgUrl'
-
 
 const ptComponents = {
   types: {

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import groq from 'groq'
+import PropTypes from "prop-types"
 import client from '../client'
 
 // index.js
@@ -10,7 +11,7 @@ const Index = ({posts}) => {
       <p>Welcome!</p>
 
       {posts.length > 0 && posts.map(
-          ({ _id, title = '', slug = '', publishedAt = '' }) =>
+          ({_id, title = '', slug = '', publishedAt = ''}) =>
             slug && (
               <li key={_id}>
                 <Link href="/blog/[slug]" as={`/blog/${slug.current}`}>
@@ -22,6 +23,10 @@ const Index = ({posts}) => {
         )}
     </div>
   )
+}
+
+Index.propTypes = {
+  posts : PropTypes.object
 }
 
 export async function getStaticProps() {

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import groq from 'groq'
-import PropTypes from "prop-types";
+import PropTypes from "prop-types"
 
 import client from '../client'
 
