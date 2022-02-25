@@ -6,6 +6,7 @@ $breakpoints: (
 ) !default;
 
 /// Mixin to manage responsive breakpoints
+//  ie: '@include respond-to('mobile') {}'
 /// @author Jesse Alvarado
 /// @param {String} $breakpoint - Breakpoint name
 /// @require $breakpoints
