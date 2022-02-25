@@ -1,3 +1,7 @@
-@use 'variables'
-@use 'typography'
-@use 'nav'
+// Global
+@use 'variables';
+@use 'breakpoints';
+@use 'typography';
+
+// Sections
+@use 'nav';
