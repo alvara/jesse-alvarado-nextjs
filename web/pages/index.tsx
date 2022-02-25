@@ -34,7 +34,6 @@ Index.getLayout = function getLayout(page: ReactElement) {
   )
 }
 
-
 Index.propTypes = {
   posts : PropTypes.object
 }
@@ -50,4 +49,3 @@ export async function getStaticProps() {
     }
   }
 }
-
