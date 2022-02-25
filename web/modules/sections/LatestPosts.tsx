@@ -6,7 +6,7 @@ export default function LatestPosts({posts}) {
   console.log(posts)
   return (
     <div>
-      <h1>LatestPosts</h1>
+      <h3>LatestPosts</h3>
       {posts.length > 0 && posts.map(
         ({_id, title = '', slug, publishedAt = ''}) =>
           slug && (

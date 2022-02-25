@@ -10,13 +10,16 @@ $body-bg: #fff;
 $primary: #333333;
 
 // Customize Bootstrap Typography
-$font-family-base: 'Open Sans', Sans-Serif; // base font
+$font-family-sans-serif: 'Open Sans', Sans-Serif; // base font
 $headings-font-family: 'Work Sans', Sans-Serif; // headings font
+$font-size-base: 1.1rem;
+$h1-font-size: 2.5rem;
+$h2-font-size: 2rem;
+$h3-font-size: 1.8rem;
 
 // $font-color-primary: rgb(5, 5, 5);
 // $font-color-secondary: rgb(58, 58, 58);
-
-
+ 
 // Bootstrap Configuration (Required)
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
@@ -63,5 +66,4 @@ $headings-font-family: 'Work Sans', Sans-Serif; // headings font
 @import "bootstrap/scss/utilities/api";
 
 // custom styles
-@import 'typography';
 @import 'nav';
