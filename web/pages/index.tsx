@@ -1,8 +1,7 @@
 import type {ReactElement} from 'react'
-import Link from 'next/link'
-import groq from 'groq'
 import PropTypes from "prop-types"
 import client from '../client'
+import groq from 'groq'
 
 import MainLayout from '../modules/layouts/mainLayout'
 import HeroHeader from '../modules/sections/HeroHeader'
@@ -19,19 +18,8 @@ export default function Index({posts}) {
       <HeroHeader />
       <Philosophy />
       <Portfolio />
-      <LatestPosts />
+      <LatestPosts posts={posts} />
       <MySkills />
-        {posts.length > 0 && posts.map(
-            ({_id, title = '', slug, publishedAt = ''}) =>
-              slug && (
-                <li key={_id}>
-                  <Link href="/blog/[slug]" as={`/blog/${slug.current}`}>
-                    <a>{title}</a>
-                  </Link>{' '}
-                  ({new Date(publishedAt).toDateString()})
-                </li>
-              )
-          )}
       <ContactMe />
     </>
   )
@@ -45,6 +33,7 @@ Index.getLayout = function getLayout(page: ReactElement) {
     </MainLayout>
   )
 }
+
 
 Index.propTypes = {
   posts : PropTypes.object
@@ -61,3 +50,4 @@ export async function getStaticProps() {
     }
   }
 }
+

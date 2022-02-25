@@ -5,4 +5,3 @@ export default function PostCard() {
     <div>postCard</div>
   )
 }
-
