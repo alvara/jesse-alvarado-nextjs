@@ -3,13 +3,12 @@ import {ReactElement} from 'react'
 import groq from 'groq'
 import {PortableText} from '@portabletext/react'
 import PropTypes from "prop-types"
-import Head from 'next/head'
 
 import PostLayout from "../../modules/layouts/postLayout"
 import client from '../../client'
 import getSanityImgUrl from '../../utils/getSanityImgUrl'
+import Head from 'next/head'
 
-// create figure to support sanity rich text images
 const ptComponents = {
   types: {
     figure: ({value}) => {
@@ -21,10 +20,10 @@ const ptComponents = {
           alt={value.alt || ' '}
           loading="lazy"
           src={getSanityImgUrl(value).width(320).height(240).fit('max').auto('format').url()}
-        />
-      )
-    }
-  }
+          />
+          )
+        }
+      }
 }
 
 const Post = (props) => {
@@ -35,8 +34,7 @@ const Post = (props) => {
         <title>{post.title}</title>
         {/* TODO: add description to schema and insert here for each post */}
       </Head>
-      
-      <div>
+      <article>
         <h1>{post?.title}</h1>
         <div>By {post?.author}</div>
 
@@ -57,8 +55,8 @@ const Post = (props) => {
           value={post.content}
           components={ptComponents}
         />
-      )}
-      </div>
+        )}
+      </article>
     </>
   )
 }
