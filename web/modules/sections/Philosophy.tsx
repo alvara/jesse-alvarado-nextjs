@@ -2,6 +2,6 @@ import React from 'react'
 
 export default function Philosophy() {
   return (
-    <div>Philosophy</div>
+    <div className="container">Philosophy</div>
   )
 }
