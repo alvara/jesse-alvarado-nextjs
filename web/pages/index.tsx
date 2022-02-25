@@ -10,17 +10,18 @@ import Portfolio from '../modules/sections/Portfolio'
 import LatestPosts from '../modules/sections/LatestPosts'
 import MySkills from '../modules/sections/MySkills'
 import ContactMe from '../modules/sections/ContactMe'
+import Container from '../common/Container'
 
 // index.js
 export default function Index({posts}) {
   return (
     <>
-      <HeroHeader />
-      <Philosophy />
-      <Portfolio />
-      <LatestPosts posts={posts} />
-      <MySkills />
-      <ContactMe />
+      <Container wrapperClass="bg-dark"><HeroHeader /></Container>
+      <Container ><Philosophy /></Container>
+      <Container ><Portfolio /></Container>
+      <Container ><LatestPosts posts={posts} /></Container>
+      <Container ><MySkills /></Container>
+      <Container ><ContactMe /></Container>
     </>
   )
 }

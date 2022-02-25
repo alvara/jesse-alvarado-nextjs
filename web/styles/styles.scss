@@ -1,15 +1,15 @@
-// Toggle Bootstrap global options
+// Bootstrap Global Options
 $enable-gradients: true;
 $enable-shadows: true;
 
-// Customize bootstrap body
+// Customize Boostrap Body
 $body-color: #333;
 $body-bg: #fff;
 
-// customize bootstrap colors
+// Customize Boostrap Colors
 $primary: #333333;
 
-// customize bootstrap typography
+// Customize Bootstrap Typography
 $font-family-base: 'Open Sans', Sans-Serif; // base font
 $headings-font-family: 'Work Sans', Sans-Serif; // headings font
 
@@ -17,17 +17,18 @@ $headings-font-family: 'Work Sans', Sans-Serif; // headings font
 // $font-color-secondary: rgb(58, 58, 58);
 
 
-// import required Boostrap files
+// Bootstrap Configuration (Required)
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
-@import "bootstrap/scss/mixins"; 
-@import "bootstrap/scss/root"; // Required
-@import "bootstrap/scss/reboot"; // Required
+@import "bootstrap/scss/mixins";
+@import "bootstrap/scss/utilities";
 
-// customize bootstrap
-@import "bootstrap/scss/type"; // typography
+// Bootstrap Layout & components
+@import "bootstrap/scss/root";
+@import "bootstrap/scss/reboot";
+@import "bootstrap/scss/type";
 // @import "bootstrap/scss/images";
-// @import "bootstrap/scss/code";
+@import "bootstrap/scss/containers";
 // @import "bootstrap/scss/grid";
 // @import "bootstrap/scss/tables";
 // @import "bootstrap/scss/forms";
@@ -35,28 +36,31 @@ $headings-font-family: 'Work Sans', Sans-Serif; // headings font
 // @import "bootstrap/scss/transitions";
 // @import "bootstrap/scss/dropdown";
 // @import "bootstrap/scss/button-group";
-// @import "bootstrap/scss/input-group"; // Requires forms
-// @import "bootstrap/scss/custom-forms";
 // @import "bootstrap/scss/nav";
-// @import "bootstrap/scss/navbar"; // Requires nav
+// @import "bootstrap/scss/navbar";
 // @import "bootstrap/scss/card";
+// @import "bootstrap/scss/accordion";
 // @import "bootstrap/scss/breadcrumb";
 // @import "bootstrap/scss/pagination";
 // @import "bootstrap/scss/badge";
-// @import "bootstrap/scss/jumbotron";
 // @import "bootstrap/scss/alert";
 // @import "bootstrap/scss/progress";
-// @import "bootstrap/scss/media";
 // @import "bootstrap/scss/list-group";
 // @import "bootstrap/scss/close";
 // @import "bootstrap/scss/toasts";
-// @import "bootstrap/scss/modal"; // Requires transitions
+// @import "bootstrap/scss/modal";
 // @import "bootstrap/scss/tooltip";
 // @import "bootstrap/scss/popover";
 // @import "bootstrap/scss/carousel";
 // @import "bootstrap/scss/spinners";
-@import "bootstrap/scss/utilities"; // display,visibility, flexbox, margin, padding 
-// @import "bootstrap/scss/print";
+// @import "bootstrap/scss/offcanvas";
+// @import "bootstrap/scss/placeholders";
+
+// Bootstrap Helpers
+// @import "bootstrap/scss/helpers";
+
+// Bootstrap Utilities
+@import "bootstrap/scss/utilities/api";
 
 // custom styles
 @import 'typography';
