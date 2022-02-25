@@ -3,23 +3,36 @@ import Link from 'next/link'
 import groq from 'groq'
 import PropTypes from "prop-types"
 import client from '../client'
+
 import MainLayout from '../modules/layouts/mainLayout'
+import HeroHeader from '../modules/sections/HeroHeader'
+import Philosophy from '../modules/sections/Philosophy'
+import Portfolio from '../modules/sections/Portfolio'
+import LatestPosts from '../modules/sections/LatestPosts'
+import MySkills from '../modules/sections/MySkills'
+import ContactMe from '../modules/sections/ContactMe'
 
 // index.js
 export default function Index({posts}) {
   return (
     <>
-      {posts.length > 0 && posts.map(
-          ({_id, title = '', slug, publishedAt = ''}) =>
-            slug && (
-              <li key={_id}>
-                <Link href="/blog/[slug]" as={`/blog/${slug.current}`}>
-                  <a>{title}</a>
-                </Link>{' '}
-                ({new Date(publishedAt).toDateString()})
-              </li>
-            )
-        )}
+      <HeroHeader />
+      <Philosophy />
+      <Portfolio />
+      <LatestPosts />
+      <MySkills />
+        {posts.length > 0 && posts.map(
+            ({_id, title = '', slug, publishedAt = ''}) =>
+              slug && (
+                <li key={_id}>
+                  <Link href="/blog/[slug]" as={`/blog/${slug.current}`}>
+                    <a>{title}</a>
+                  </Link>{' '}
+                  ({new Date(publishedAt).toDateString()})
+                </li>
+              )
+          )}
+      <ContactMe />
     </>
   )
 }
