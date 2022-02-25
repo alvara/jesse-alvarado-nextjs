@@ -5,12 +5,13 @@ export default function Navbar() {
   return (
     <nav>
       {/* logo */}
-      <div>Jesse Alvarado</div>
+      <Link href="/">Jesse Alvarado</Link>
 
       {/* menu */}
       <div>
         <Link href="/#about"><a>About</a></Link>
         <Link href="/#portfolio"><a>Portfolio</a></Link>
+        <Link href="/blog"><a>Blog</a></Link>
       </div>
 
       {/* socials */}
