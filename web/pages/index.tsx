@@ -8,9 +8,7 @@ import MainLayout from '../modules/layouts/mainLayout'
 // index.js
 export default function Index({posts}) {
   return (
-    <div>
-      <p>Welcome!</p>
-
+    <>
       {posts.length > 0 && posts.map(
           ({_id, title = '', slug, publishedAt = ''}) =>
             slug && (
@@ -22,7 +20,7 @@ export default function Index({posts}) {
               </li>
             )
         )}
-    </div>
+    </>
   )
 }
 
