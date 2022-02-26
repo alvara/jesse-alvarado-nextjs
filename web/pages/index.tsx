@@ -14,7 +14,7 @@ import Container from '../common/Container'
 
 // index.js
 export default function Index({posts}) {
-
+  console.log(posts)
   return (
     <>
       <Container wrapperClass="vh-100-w-nav" className="h-100 text-center d-flex flex-column justify-content-end"><HeroHeader /></Container>
@@ -52,13 +52,16 @@ export async function getStaticProps() {
       title,
       _createdAt,
       _id,
+      "mainImage": mainImage.asset->url,
       _rev,
       _type,
       _updateAt,
       "authorImg": author->image,
-      mainImage
     } | order(publishedAt desc)
   `)
+
+  // convert Sanity image to valid src
+
 
 
   return {

@@ -3,7 +3,7 @@ import React from 'react'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 
-export default function InfoCard({href = '/', as = '', title = '', subtitle = '', content}) {
+export default function InfoCard({href = '/', as = '', title = '', subtitle = '', content, mainImage = 'https://via.placeholder.com/300x300'}) {
   
   const disableLink = href !== '/' ? '' : 'disable-link'
   
@@ -11,7 +11,7 @@ export default function InfoCard({href = '/', as = '', title = '', subtitle = ''
     <Link href={href} as={as}>
       <a className={`${disableLink}`}>
       <div className="infoCard text-start m-3 ">
-        <Image src="https://via.placeholder.com/300x300" width="250" height="250" layout="responsive" alt="test" className="mb-4"/>
+        <Image src={mainImage} width="250" height="250" layout="responsive" alt="test" className="mb-4"/>
         <h5>{title}</h5>
         <h6>{subtitle}</h6>
         <p>{content}</p>
@@ -27,4 +27,5 @@ InfoCard.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   content: PropTypes.string,
+  mainImage: PropTypes.string
 }
