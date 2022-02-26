@@ -23,10 +23,10 @@ export default function Navbar() {
             </ul>
             <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                    <Link href="/#about"><a className="nav-link">Github</a></Link>
+                    <Link href="https://github.com/alvara"><a className="nav-link" target={'_blank'}>Github</a></Link>
                 </li>
                 <li className="nav-item">
-                    <Link href="/#about"><a className="nav-link">LinkedIn</a></Link>
+                    <Link href="https://www.linkedin.com/in/jesse-alvarado/"><a className="nav-link" target={'_blank'}>LinkedIn</a></Link>
                 </li>
             </ul>
         </div>
@@ -34,21 +34,3 @@ export default function Navbar() {
 </nav>
   )
 }
-
-    // <nav>
-    //   {/* logo */}
-    //   <Link href="/">Jesse Alvarado</Link>
-
-    //   {/* menu */}
-    //   <div>
-    //     
-    //     
-    //     
-    //   </div>
-
-    //   {/* socials */}
-    //   <div>
-    //   
-    //   
-    //   </div>
-    // </nav>
