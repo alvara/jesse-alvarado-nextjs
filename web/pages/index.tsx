@@ -16,7 +16,7 @@ export default function Index({posts}) {
   
   return (
     <>
-      <Container wrapperClass="bg-dark"><HeroHeader /></Container>
+      <Container wrapperClass="bg-dark text-white" className="mh-100"><HeroHeader /></Container>
       <Container ><Philosophy /></Container>
       <Container ><Portfolio /></Container>
       <Container ><LatestPosts posts={posts} /></Container>
