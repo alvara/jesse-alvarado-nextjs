@@ -14,7 +14,7 @@ import Container from '../common/Container'
 
 // index.js
 export default function Index({posts}) {
-  
+
   return (
     <>
       <Container wrapperClass="vh-100-w-nav" className="h-100 text-center d-flex flex-column justify-content-end"><HeroHeader /></Container>
@@ -38,12 +38,26 @@ Index.getLayout = function getLayout(page: ReactElement) {
 }
 
 Index.propTypes = {
-  posts : PropTypes.arrayOf(PropTypes.object)
+  posts : PropTypes.arrayOf(PropTypes.object),
 }
 
 export async function getStaticProps() {
   const posts = await client.fetch(groq`
-    *[_type == "post" && publishedAt < now()][0..2] | order(publishedAt desc)
+    *[_type == "post" && publishedAt < now()][0..2]{
+      "author": author->name,
+      "categories": categories[]->title,
+      content,
+      publishedAt,
+      slug,
+      title,
+      _createdAt,
+      _id,
+      _rev,
+      _type,
+      _updateAt,
+      "authorImg": author->image,
+      mainImage
+    } | order(publishedAt desc)
   `)
 
   return {

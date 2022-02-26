@@ -6,6 +6,10 @@
   padding: 6px 8px;
   border-radius: 6px;
 
+  &:hover {
+    background-color: #c0c2c9;;
+  }
+
   &.active {
     background-color: $primary;
   }

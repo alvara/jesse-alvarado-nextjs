@@ -38,7 +38,7 @@ Blog.getLayout = function getLayout(page: ReactElement) {
 }
 
 Blog.propTypes = {
-  posts: PropTypes.object,
+  posts: PropTypes.arrayOf(PropTypes.object),
 };
 
 
