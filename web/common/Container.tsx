@@ -4,9 +4,10 @@ import PropTypes from "prop-types"
 // wrap section with bootstrap container
 export default function Container({children, wrapperClass, className}) {
   return (
+    // container wrapper
     <div className={wrapperClass}>
       <div className={`container ${className}`}>
-        <div>{children}</div>
+        {children}
       </div>
     </div>
   )
