@@ -9,7 +9,7 @@ import Philosophy from '../modules/sections/Philosophy'
 import Portfolio from '../modules/sections/Portfolio'
 import LatestPosts from '../modules/sections/LatestPosts'
 import MySkills from '../modules/sections/MySkills'
-import ContactMe from '../modules/sections/ContactMe'
+// import ContactMe from '../modules/sections/ContactMe'
 import Container from '../common/Container'
 
 // index.js
@@ -41,6 +41,7 @@ Index.propTypes = {
 }
 
 export async function getStaticProps() {
+  // query for blog posts 
   const posts = await client.fetch(groq`
     *[_type == "post" && publishedAt < now()][0..2]{
       "author": author->name,
@@ -59,7 +60,7 @@ export async function getStaticProps() {
     } | order(publishedAt desc)
   `)
 
-  // convert Sanity image to valid src
+  // query for list of all portfolio categories
 
 
 

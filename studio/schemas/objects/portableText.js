@@ -19,7 +19,6 @@ export default {
           { title: 'Emphasis', value: 'em' },
           { title: 'Code', value: 'code' },
         ],
-        annotations: [{ type: 'link' }, { type: 'internalLink' }],
       },
     },
     { type: 'figure' },
