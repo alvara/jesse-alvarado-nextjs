@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 export default function Container({children, wrapperClass}) {
   return (
     <div className={wrapperClass}>
-      <div className='container py-5 test'>{children}</div>
+      <div className='container py-5'>{children}</div>
     </div>
   )
 }
