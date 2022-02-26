@@ -1,11 +1,12 @@
 import React from 'react'
 import PropTypes from "prop-types"
 import InfoCard from '../widgets/InfoCard'
+import Link from 'next/link'
 
 export default function LatestPosts({posts}) {
   return (
-    <div>
-      <h1 className='text-center'>Latest Articles</h1>
+    <div className='text-center'>
+      <h1>Latest Articles</h1>
       <div className='row'>
       {posts.length > 0 && posts.map(
         ({_id, title = '', slug, publishedAt = '', mainImage}) =>
@@ -22,6 +23,7 @@ export default function LatestPosts({posts}) {
           )
         )}
       </div>
+      <Link href={'/blog'}><button>Read More Articles</button></Link>
     </div>
   )
 }
