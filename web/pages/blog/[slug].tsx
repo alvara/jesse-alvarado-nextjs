@@ -31,7 +31,10 @@ const Post = (props) => {
   return (
     <>
       <Head>
-        <title>{post.title}</title>
+        {post?.title && (
+         <title>{post.title}</title>
+        )}
+
         {/* TODO: add description to schema and insert here for each post */}
       </Head>
       <article>
