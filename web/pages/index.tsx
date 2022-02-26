@@ -17,9 +17,9 @@ export default function Index({posts}) {
   
   return (
     <>
-      <Container wrapperClass="vh-100-w-nav" className="h-100 h-100 text-center d-flex flex-column justify-content-end"><HeroHeader /></Container>
-      <Container wrapperClass="min-h-100 d-flex justify-content-center align-items-center" className=""><Philosophy /></Container>
-      {/* <Container wrapperClass="vh-100" className="h-100"><Portfolio /></Container> */}
+      <Container wrapperClass="vh-100-w-nav" className="h-100 text-center d-flex flex-column justify-content-end"><HeroHeader /></Container>
+      <Container wrapperClass="min-h-100 d-flex align-items-center"><Philosophy /></Container>
+      <Container wrapperClass="min-h-100 d-flex justify-content-center align-items-center"><Portfolio /></Container>
       {/* <Container wrapperClass="vh-100" className="h-100"><LatestPosts posts={posts} /></Container> */}
       {/* <Container wrapperClass="vh-100" className="h-100"><MySkills /></Container> */}
       {/* <Container wrapperClass="vh-100" className="h-100"><ContactMe /></Container> */}
