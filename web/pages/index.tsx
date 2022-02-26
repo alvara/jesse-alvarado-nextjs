@@ -18,11 +18,11 @@ export default function Index({posts}) {
   return (
     <>
       <Container wrapperClass="vh-100-w-nav" className="h-100"><HeroHeader /></Container>
-      <Container wrapperClass="vh-100"><Philosophy /></Container>
-      <Container wrapperClass="vh-100"><Portfolio /></Container>
-      <Container wrapperClass="vh-100"><LatestPosts posts={posts} /></Container>
-      <Container wrapperClass="vh-100"><MySkills /></Container>
-      <Container wrapperClass="vh-100"><ContactMe /></Container>
+      <Container wrapperClass="vh-100" className="h-100"><Philosophy /></Container>
+      <Container wrapperClass="vh-100" className="h-100"><Portfolio /></Container>
+      <Container wrapperClass="vh-100" className="h-100"><LatestPosts posts={posts} /></Container>
+      <Container wrapperClass="vh-100" className="h-100"><MySkills /></Container>
+      <Container wrapperClass="vh-100" className="h-100"><ContactMe /></Container>
     </>
   )
 }
