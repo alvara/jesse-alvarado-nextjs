@@ -35,7 +35,7 @@ export default createSchema({
   types: schemaTypes.concat([
     author,
     category,
-    cta,
+    // cta,
     embedHTML,
     figure,
     // hero,
@@ -47,8 +47,8 @@ export default createSchema({
     portableText,
     post,
     route,
-    simplePortableText,
-    siteConfig,
+    // simplePortableText,
+    // siteConfig,
     // textSection,
   ]),
 });
