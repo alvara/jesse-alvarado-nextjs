@@ -60,6 +60,7 @@ export async function getStaticProps() {
     } | order(publishedAt desc)
   `)
 
+
   return {
     props: {
       posts

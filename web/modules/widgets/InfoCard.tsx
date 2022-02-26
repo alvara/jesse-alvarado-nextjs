@@ -3,9 +3,9 @@ import React from 'react'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 
-export default function InfoCard({href = '', as = '', title = '', subtitle = '', content}) {
+export default function InfoCard({href = '/', as = '', title = '', subtitle = '', content}) {
   
-  const disableLink = href !== '' ? '' : 'disable-link'
+  const disableLink = href !== '/' ? '' : 'disable-link'
   
   return (
     <Link href={href} as={as}>
