@@ -3,7 +3,6 @@ import Link from 'next/link'
 import PropTypes from "prop-types"
 
 export default function LatestPosts({posts}) {
-  console.log(posts)
   return (
     <div>
       <h3>LatestPosts</h3>

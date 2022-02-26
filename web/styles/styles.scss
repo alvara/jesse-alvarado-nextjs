@@ -1,5 +1,5 @@
 // Bootstrap Global Options
-$enable-gradients: true;
+$enable-gradients: false;
 $enable-shadows: true;
 
 // Customize Boostrap Body
@@ -8,6 +8,7 @@ $body-bg: #fff;
 
 // Customize Boostrap Colors
 $primary: #333333;
+$gray-900: #333;
 
 // Customize Bootstrap Typography
 $font-family-sans-serif: 'Open Sans', Sans-Serif; // base font
