@@ -26,6 +26,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 // Bootstrap Configuration (Required)
 @import "bootstrap/scss/functions";
 @import "bootstrap/scss/variables";
@@ -72,4 +73,5 @@ body {
 @import "bootstrap/scss/utilities/api";
 
 // custom styles
+@import 'spacing';
 @import 'nav';

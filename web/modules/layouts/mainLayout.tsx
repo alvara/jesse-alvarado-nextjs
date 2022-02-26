@@ -4,6 +4,7 @@ import PropTypes from "prop-types"
 import Navbar from '../sections/Navbar'
 import Footer from '../sections/Footer'
 import Head from "next/head";
+import Container from "../../common/Container";
 
 export default function MainLayout({children}) {
   return (
@@ -13,7 +14,7 @@ export default function MainLayout({children}) {
       </Head>
       <Navbar/>
       <main>{children}</main>
-      <Footer />
+      <Container wrapperClass="bg-dark"><Footer /></Container>
     </>
   )
 }
