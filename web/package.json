@@ -11,6 +11,7 @@
     "start": "next start"
   },
   "dependencies": {
+    "@popperjs/core": "^2.11.2",
     "@portabletext/react": "^1.0.2",
     "@sanity/client": "^3.0.3",
     "@sanity/image-url": "^1.0.1",
