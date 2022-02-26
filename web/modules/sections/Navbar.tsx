@@ -6,10 +6,10 @@ export default function Navbar() {
     <nav className="navbar navbar-expand-md navbar-dark bg-primary">
     <div className="container-fluid">
      <Link href="/"><a className="navbar-brand">Jesse Alvarado</a></Link>
-        <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar">
+        <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar" aria-controls="collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>
         </button>
-        <div className="navbar-collapse collapse" id="collapseNavbar">
+        <div className="collapse navbar-collapse" id="collapseNavbar">
             <ul className="navbar-nav ms-auto">
                 <li className="nav-item active">
                     <Link href="/#about"><a className="nav-link">About</a></Link>

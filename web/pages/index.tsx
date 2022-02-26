@@ -1,4 +1,3 @@
-import type {ReactElement} from 'react'
 import PropTypes from "prop-types"
 import client from '../client'
 import groq from 'groq'
@@ -14,6 +13,7 @@ import Container from '../common/Container'
 
 // index.js
 export default function Index({posts}) {
+  
   return (
     <>
       <Container wrapperClass="bg-dark"><HeroHeader /></Container>
@@ -28,6 +28,7 @@ export default function Index({posts}) {
 
 // Get the main template for standard pages
 Index.getLayout = function getLayout(page: ReactElement) {
+  
   return (
     <MainLayout>
       {page}
