@@ -38,7 +38,7 @@ Index.getLayout = function getLayout(page: ReactElement) {
 }
 
 Index.propTypes = {
-  posts : PropTypes.object
+  posts : PropTypes.arrayOf(PropTypes.object)
 }
 
 export async function getStaticProps() {
