@@ -8,7 +8,8 @@ $body-bg: #eff1f8;
 
 // Customize Boostrap Colors
 $primary: #333333;
-$gray-900: #333;
+$secondary: #ccced4;
+$gray-900: rgb(105, 105, 105);
 
 // Customize Bootstrap Typography
 $font-family-sans-serif: 'Open Sans', Sans-Serif; // base font
@@ -75,4 +76,5 @@ body {
 // custom styles
 @import 'spacing';
 @import 'nav';
+@import 'pill';
 @import 'portfolioCard';
