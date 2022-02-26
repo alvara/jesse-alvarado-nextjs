@@ -21,7 +21,7 @@ import link from './objects/link';
 import portableText from './objects/portableText';
 import simplePortableText from './objects/simplePortableText';
 
-// Landing page sections
+// Landing page sectionsv
 import hero from './objects/hero';
 import imageSection from './objects/imageSection';
 import mailchimp from './objects/mailchimp';
@@ -35,20 +35,20 @@ export default createSchema({
   types: schemaTypes.concat([
     author,
     category,
-    // cta,
+    cta,
     embedHTML,
     figure,
     // hero,
     // imageSection,
-    // internalLink,
+    internalLink,
     link,
-    mailchimp,
+    // mailchimp,
     // page,
     portableText,
     post,
-    // route,
-    // simplePortableText,
-    // siteConfig,
+    route,
+    simplePortableText,
+    siteConfig,
     // textSection,
   ]),
 });

@@ -22,10 +22,10 @@ export default {
       type: 'array',
       title: 'Page sections',
       of: [
-        { type: 'hero' },
-        { type: 'imageSection' },
-        { type: 'mailchimp' },
-        { type: 'textSection' },
+        // { type: 'hero' },
+        // { type: 'imageSection' },
+        // { type: 'mailchimp' },
+        // { type: 'textSection' },
       ],
     },
     {
