@@ -1,4 +1,5 @@
 import PropTypes from "prop-types"
+import {ReactElement} from "react"
 import client from '../client'
 import groq from 'groq'
 
@@ -16,7 +17,7 @@ export default function Index({posts}) {
   
   return (
     <>
-      <Container wrapperClass="bg-dark text-white" className="mh-100"><HeroHeader /></Container>
+      <Container wrapperClass="bg-success text-white" className="d-flex h-100 flex-column"><HeroHeader /></Container>
       <Container ><Philosophy /></Container>
       <Container ><Portfolio /></Container>
       <Container ><LatestPosts posts={posts} /></Container>
