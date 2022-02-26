@@ -5,7 +5,7 @@ import InfoCard from '../widgets/InfoCard'
 export default function LatestPosts({posts}) {
   return (
     <div>
-      <h3 className=''>LatestPosts</h3>
+      <h1 className='text-center'>Latest Articles</h1>
       <div className='row'>
       {posts.length > 0 && posts.map(
         ({_id, title = '', slug, publishedAt = ''}) =>
