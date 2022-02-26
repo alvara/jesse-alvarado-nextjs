@@ -1,12 +1,25 @@
 import Image from 'next/image'
 import React from 'react'
+import Link from 'next/link'
+import PropTypes from 'prop-types'
 
-export default function InfoCard() {
+export default function InfoCard({href = '', as = '', title = '', subtitle = '', content}) {
   return (
-    <div className="infoCard text-start m-3">
-      <Image src="https://via.placeholder.com/300x300" width="250" height="250" layout="responsive" alt="test" className="mb-4"/>
-      <h6>Result Oriented</h6>
-      <p>I focus on the end result first, building an MVP with prioritized features and an iterative approach.</p>
-    </div>
+    <Link href={href} as={as} >
+      <div className="infoCard text-start m-3">
+        <Image src="https://via.placeholder.com/300x300" width="250" height="250" layout="responsive" alt="test" className="mb-4"/>
+        <h5>{title}</h5>
+        <h6>{subtitle}</h6>
+        <p>{content}</p>
+      </div>
+    </Link>
   )
+}
+
+InfoCard.propTypes = {
+  href: PropTypes.string,
+  as: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  content: PropTypes.string,
 }

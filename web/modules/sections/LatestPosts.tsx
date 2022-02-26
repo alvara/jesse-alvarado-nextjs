@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from 'next/link'
 import PropTypes from "prop-types"
+import InfoCard from '../widgets/InfoCard'
 
 export default function LatestPosts({posts}) {
   return (
@@ -9,12 +9,13 @@ export default function LatestPosts({posts}) {
       {posts.length > 0 && posts.map(
         ({_id, title = '', slug, publishedAt = ''}) =>
           slug && (
-            <li key={_id}>
-              <Link href="/blog/[slug]" as={`/blog/${slug.current}`}>
-                <a>{title}</a>
-              </Link>{' '}
-              ({new Date(publishedAt).toDateString()})
-            </li>
+            <InfoCard 
+              key={_id} 
+              href={"/blog/[slug]"}
+              as={`/blog/${slug.current}`} 
+              title={title} 
+              subtitle={new Date(publishedAt).toDateString()}
+            />
           )
         )}
     </div>
