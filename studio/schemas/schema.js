@@ -12,7 +12,7 @@ import post from './documents/post';
 import portfolio from './documents/portfolio';
 import category from './documents/category';
 import author from './documents/author';
-import skill from './documents/skill';
+import tag from './documents/tag';
 
 // Object types
 // import cta from './objects/cta';
@@ -38,7 +38,7 @@ export default createSchema({
     post,
     category,
     portfolio,
-    skill,
+    tag,
     author,
     // cta,
     // embedHTML,

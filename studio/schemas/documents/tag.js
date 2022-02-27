@@ -1,6 +1,6 @@
 export default {
-  name: 'skill',
-  title: 'Skill',
+  name: 'tag',
+  title: 'Portfolio Tag',
   type: 'document',
   fields: [
     {
@@ -15,6 +15,12 @@ export default {
       options: {
         hotspot: true
       }
+    },
+    {
+      name: 'isSkill',
+      type: 'boolean',
+      title: 'Is this a skill?', 
+      description : 'Is this tag applicable to showcase in your skills and experience section?'
     }
   ]
 }

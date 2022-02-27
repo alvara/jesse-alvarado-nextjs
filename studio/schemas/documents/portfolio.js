@@ -32,10 +32,10 @@ export default {
       }
     },
     {
-      name: 'skills',
-      title: 'Skills',
+      name: 'tag',
+      title: 'Tag',
       type: 'array',
-      of: [{type: 'reference', to: {type: 'skill'}}]
+      of: [{type: 'reference', to: {type: 'tag'}}]
     },
     {
       name: 'publishedAt',
