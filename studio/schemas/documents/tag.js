@@ -17,9 +17,9 @@ export default {
       }
     },
     {
-      name: 'isSkill',
+      name: 'showcase',
       type: 'boolean',
-      title: 'Is this a skill?', 
+      title: 'Showcase?', 
       description : 'Is this tag applicable to showcase in your skills and experience section?'
     }
   ]
