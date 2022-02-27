@@ -9,8 +9,10 @@ import schemaTypes from 'all:part:@sanity/base/schema-type';
 import route from './documents/route';
 // import siteConfig from './documents/siteConfig';
 import post from './documents/post';
+import portfolio from './documents/portfolio';
 import category from './documents/category';
 import author from './documents/author';
+import skill from './documents/skill';
 
 // Object types
 // import cta from './objects/cta';
@@ -33,22 +35,24 @@ export default createSchema({
   // Then proceed to concatenate our our document type
   // to the ones provided by any plugins that are installed
   types: schemaTypes.concat([
-    author,
+    post,
     category,
+    portfolio,
+    skill,
+    author,
     // cta,
-    embedHTML,
-    figure,
+    // embedHTML,
     // hero,
     // imageSection,
-    internalLink,
-    link,
+    // internalLink,
+    // link,
     // mailchimp,
     // page,
-    portableText,
-    post,
-    route,
+    // route,
     // simplePortableText,
     // siteConfig,
     // textSection,
+    portableText,
+    figure,
   ]),
 });
