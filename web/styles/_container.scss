@@ -1,9 +1,11 @@
+// settings for customization
+$container-padding: 56px;
+
 .bg-2 {
   background-color: $body-bg-2; 
 }
 
 .container-wrapper {
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: $container-padding;
+  padding-bottom: $container-padding;
 }
-
