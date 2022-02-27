@@ -60,7 +60,8 @@ export default function MySkills() {
           </div>
         </div>
         <div className='col-md-5'>
-          <p>My bio will go here.</p>
+          <p>I'm a self-driven, team-oriented full stack developer with a background in web development. I aim to solve problems and drive results for clients by developing web applications that are fast in performance, flexible in design, and with clean code for easy collaboration and maintenance.</p>
+          <p>I am currently focused on learning and applying Go(Golang) and Google Cloud Platform (GCP) services to projects that are built on NextJS.</p>
           <div className='row'>
             <div className='col-md-3'>Work Experience</div>
             <div className='col-md-9'><h5>Full Stack Developer</h5><h5>Beams Inc.</h5></div>
