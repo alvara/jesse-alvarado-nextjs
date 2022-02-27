@@ -5,7 +5,7 @@ import PropTypes from "prop-types"
 export default function Container({children, wrapperClass, className}) {
   return (
     // container wrapper
-    <div className={wrapperClass}>
+    <div className={`container-wrapper ${wrapperClass}`}>
       <div className={`container ${className}`}>
         {children}
       </div>

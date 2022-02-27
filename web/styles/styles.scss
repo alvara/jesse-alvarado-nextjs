@@ -5,6 +5,9 @@ $enable-shadows: true;
 // Customize Boostrap Body
 $body-color: #333;
 $body-bg: #eff1f8;
+$body-bg-2: darken(#eff1f8,2%);
+
+
 
 // Customize Boostrap Colors
 $primary: #333333;
@@ -75,6 +78,7 @@ body {
 
 // custom styles
 @import 'spacing';
+@import 'container';
 @import 'nav';
 @import 'pill';
 @import 'portfolioCard';
