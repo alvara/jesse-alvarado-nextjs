@@ -14,7 +14,7 @@ export default function MainLayout({children}) {
       </Head>
       <Navbar/>
       <main>{children}</main>
-      <Container wrapperClass="bg-dark"><Footer /></Container>
+      <Container wrapperClass="bg-dark text-white p-3"><Footer /></Container>
     </>
   )
 }
