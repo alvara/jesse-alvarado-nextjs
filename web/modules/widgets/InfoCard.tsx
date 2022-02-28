@@ -3,10 +3,9 @@ import React from 'react'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
 
-export default function InfoCard({href = '/', as = '', title = '', subtitle = '', content, mainImage = 'https://via.placeholder.com/300x300', className}) {
+export default function InfoCard({href = '/', as = '', title = '', subtitle = '', content, mainImage = 'https://via.placeholder.com/300x300', className, tags = []}) {
   
   const disableLink = href !== '/' ? '' : 'disable-link'
-  
   return (
     <Link href={href} as={as}>
       <a className={`infoCard-wrapper ${disableLink}`}>
@@ -16,6 +15,9 @@ export default function InfoCard({href = '/', as = '', title = '', subtitle = ''
           <h5 className='pt-3'>{title}</h5>
           <h6>{subtitle}</h6>
           <p>{content}</p>
+          {tags.length > 0 && tags.map((tag)=>(
+            <span className='pill mini'>{tag}</span>
+          ))}
         </div>
       </div>
       </a>
@@ -30,5 +32,6 @@ InfoCard.propTypes = {
   subtitle: PropTypes.string,
   content: PropTypes.string,
   mainImage: PropTypes.string,
-  className: PropTypes.string
+  className: PropTypes.string,
+  tags : PropTypes.arrayOf(PropTypes.string)
 }

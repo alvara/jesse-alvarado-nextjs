@@ -14,7 +14,14 @@
   &.active {
     background-color: $primary;
   }
-
+  
+  &.mini {
+    background-color: $primary;
+    color: $gray-200;
+    font-size: 0.8rem;
+    padding: 4px 8px;
+    margin: 3px;
+  }
   // prevent user from selecting pill content
     -webkit-touch-callout: none; /* iOS Safari */
     -webkit-user-select: none; /* Safari */
