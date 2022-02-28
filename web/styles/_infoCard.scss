@@ -1,6 +1,23 @@
+.infoCard-wrapper {
+  text-decoration: none;
+  color: inherit;
+  
+  &:hover {
+    color: inherit;
+    cursor: pointer;
+  }
+}
+
 .infoCard {
   display: block;
-}
-.infoCard img {
-  border-radius: 16px;
-}
+
+  img {
+    border-radius: 16px;
+  }
+
+  h5 {
+    font-weight: 900;
+    text-decoration: none;
+    font-size: 1.2rem;
+  }
+} 
