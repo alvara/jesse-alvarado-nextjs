@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import PropTypes from 'prop-types'
 
 import InfoCard from '../widgets/InfoCard'
@@ -9,7 +9,12 @@ export default function Portfolio({portfolio, tags}) {
   // const featured = tags.find(tag => tag.title === "featured");
 
   const [selected, setSelected] = useState("featured")
-  console.log(portfolio)
+  const [data, setData] = useState([])
+
+  useEffect(()=>{
+    const filteredItems = portfolio.filter((item) => item.tags.includes(selected))
+    setData(filteredItems)
+  },[portfolio, selected])
 
   return (
     <div id="portfolio" className="h-100 text-center d-flex flex-column justify-content-center">
@@ -24,7 +29,7 @@ export default function Portfolio({portfolio, tags}) {
       </div>
     </div>
     <div className="row ow-cols-sm-4 row-cols-md-3 ">
-      {portfolio.length > 0 && portfolio.map(({_id, title,summary, mainImage})=>(
+      {data.length > 0 && data.map(({_id, title,summary, mainImage})=>(
         <div key={_id}><InfoCard className='portfolioCard'  href={'#'} as={'#'} title={title} subtitle={summary} mainImage={mainImage} /></div>
       )
       )}

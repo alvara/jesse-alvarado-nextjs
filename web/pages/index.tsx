@@ -80,7 +80,8 @@ export async function getStaticProps() {
       title,
       summary,
       slug,
-      "mainImage": mainImage.asset->url
+      "mainImage": mainImage.asset->url,
+      "tags": tag[]->slug
     }
   `)
 

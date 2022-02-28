@@ -38,7 +38,7 @@ export default {
     },
     {
       name: 'tag',
-      title: 'Tag',
+      title: 'Tags',
       type: 'array',
       of: [{type: 'reference', to: {type: 'tag'}}]
     },
