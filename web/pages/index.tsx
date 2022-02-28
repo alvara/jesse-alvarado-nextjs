@@ -13,7 +13,9 @@ import MySkills from '../modules/sections/MySkills'
 import Container from '../common/Container'
 
 // index.js
-export default function Index({posts}) {
+export default function Index({posts, tags, portfolio}) {
+  console.log(tags)
+  console.log(portfolio)
   return (
     <>
       <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 text-center d-flex flex-column justify-content-end"><HeroHeader /></Container>
@@ -38,6 +40,8 @@ Index.getLayout = function getLayout(page: ReactElement) {
 
 Index.propTypes = {
   posts : PropTypes.arrayOf(PropTypes.object),
+  portfolio : PropTypes.arrayOf(PropTypes.object),
+  tags : PropTypes.arrayOf(PropTypes.object),
 }
 
 export async function getStaticProps() {
@@ -60,13 +64,22 @@ export async function getStaticProps() {
     } | order(publishedAt desc)
   `)
 
-  // query for list of all portfolio categories
+  // Query For Portfolio Items
+  const tags = await client.fetch(groq`
+    *[_type == "tag"]
+  `)
 
+  // Query For Portfolio Tags
+  const portfolio = await client.fetch(groq`
+    *[_type == "portfolio"]
+  `)
 
 
   return {
     props: {
-      posts
+      posts,
+      portfolio,
+      tags
     }
   }
 }
