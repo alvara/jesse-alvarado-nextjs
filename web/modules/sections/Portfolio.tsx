@@ -23,6 +23,10 @@ export default function Portfolio({portfolio, tags}) {
       </div>
     </div>
     <div className="row">
+      {portfolio.length > 0 && portfolio.map(()=>(
+        <div>test</div>
+      )
+      )}
       <div className="col-md-3"><PortfolioCard /></div>
       <div className="col-md-3"><PortfolioCard /></div>
       <div className="col-md-3"><PortfolioCard /></div>
