@@ -4,8 +4,8 @@ $enable-shadows: true;
 
 // Customize Boostrap Body
 $body-color: #333;
-$body-bg: #eff1f8;
-$body-bg-2: darken(#eff1f8,2%);
+$body-bg: hsl(227, 15%, 95%);
+$body-bg-2: darken($body-bg,2%);
 
 // Customize Boostrap Colors
 $primary: #333333;
