@@ -75,7 +75,13 @@ export async function getStaticProps() {
 
   // Query For Portfolio Tags
   const portfolio = await client.fetch(groq`
-    *[_type == "portfolio"]
+    *[_type == "portfolio"]{
+      _id,
+      title,
+      summary,
+      slug,
+      "mainImage": mainImage.asset->url
+    }
   `)
 
 

@@ -2,6 +2,7 @@ import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 
 import PortfolioCard from '../widgets/PortfolioCard'
+import InfoCard from '../widgets/InfoCard'
 export default function Portfolio({portfolio, tags}) {
 
   // TODO: Move featured tag to the front of the array
@@ -9,6 +10,7 @@ export default function Portfolio({portfolio, tags}) {
   // const featured = tags.find(tag => tag.title === "featured");
 
   const [selected, setSelected] = useState("featured")
+  console.log(portfolio)
 
   return (
     <div id="portfolio" className="h-100 text-center d-flex flex-column justify-content-center">
@@ -22,27 +24,18 @@ export default function Portfolio({portfolio, tags}) {
           )}
       </div>
     </div>
-    <div className="row">
-      {portfolio.length > 0 && portfolio.map(()=>(
-        <div>test</div>
+    <div className="row ow-cols-sm-4 row-cols-md-4 ">
+      {portfolio.length > 0 && portfolio.map(({_id, title,summary, mainImage})=>(
+        <div key={_id}><InfoCard  href={'#'} as={'#'} title={title} subtitle={summary} mainImage={mainImage} /></div>
       )
       )}
-      <div className="col-md-3"><PortfolioCard /></div>
-      <div className="col-md-3"><PortfolioCard /></div>
-      <div className="col-md-3"><PortfolioCard /></div>
-      <div className="col-md-3"><PortfolioCard /></div>
-      <div className="col-md-3"><PortfolioCard /></div>
-      <div className="col-md-3"><PortfolioCard /></div>
-      <div className="col-md-3"><PortfolioCard /></div>
-      <div className="col-md-3"><PortfolioCard /></div>
-      <div className="col-md-3"><PortfolioCard /></div>
-      <div className="col-md-3"><PortfolioCard /></div>
     </div>
   </div>
   )
 }
 
 Portfolio.propTypes = {
+  // Portfolio Tags
   portfolio: PropTypes.arrayOf(PropTypes.object),
-  tags: PropTypes.arrayOf(PropTypes.object),
+  tags: PropTypes.arrayOf(PropTypes.object)
 }

@@ -11,7 +11,7 @@ export default function InfoCard({href = '/', as = '', title = '', subtitle = ''
     <Link href={href} as={as}>
       <a className={`infoCard-wrapper ${disableLink}`}>
       <div className="infoCard text-start m-3 ">
-        <Image src={mainImage} width="250" height="250" layout="responsive" alt="test" className=""/>
+        <Image src={mainImage} width="250" height="250" layout="responsive" objectFit='scale-down' alt="test" className=""/>
         <h5 className='pt-3'>{title}</h5>
         <h6>{subtitle}</h6>
         <p>{content}</p>
