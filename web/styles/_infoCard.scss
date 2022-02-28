@@ -10,6 +10,7 @@
 
 .infoCard {
   display: block;
+  
 
   img {
     border-radius: 16px;
@@ -21,12 +22,22 @@
     font-size: 1.2rem;
   }
 
-
-  // turn info box into card
-  &.card {
+  // add to infoBox to transform into a Porfolio Card
+  &.portfolioCard {
     background-color: white;
+    border-radius: 16px;
+    padding: 32px;
+ 
+
+    .infoCard-content {
+      padding: 16px;
+    }
   }
+
+
 } 
+
+
 
 // add to disable links on cards
 .disable-link {
