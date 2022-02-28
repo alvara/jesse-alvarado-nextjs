@@ -13,14 +13,13 @@ import MySkills from '../modules/sections/MySkills'
 import Container from '../common/Container'
 
 // index.js
-export default function Index({posts, tags, portfolio}) {
-  console.log(tags)
-  console.log(portfolio)
+export default function Index({posts, portfolio, tags}) {
+
   return (
     <>
       <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 text-center d-flex flex-column justify-content-end"><HeroHeader /></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><Philosophy /></Container>
-      <Container wrapperClass="min-h-100 d-flex align-items-center"><Portfolio /></Container>
+      <Container wrapperClass="min-h-100 d-flex align-items-center"><Portfolio portfolio={portfolio} tags={tags}/></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><LatestPosts posts={posts} /></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center"><MySkills /></Container>
       {/* <Container wrapperClass="vh-100" className="h-100"><ContactMe /></Container> */}
@@ -39,9 +38,9 @@ Index.getLayout = function getLayout(page: ReactElement) {
 }
 
 Index.propTypes = {
-  posts : PropTypes.arrayOf(PropTypes.object),
-  portfolio : PropTypes.arrayOf(PropTypes.object),
-  tags : PropTypes.arrayOf(PropTypes.object),
+  posts: PropTypes.arrayOf(PropTypes.object),
+  portfolio: PropTypes.arrayOf(PropTypes.object),
+  tags: PropTypes.arrayOf(PropTypes.object),
 }
 
 export async function getStaticProps() {
@@ -66,7 +65,12 @@ export async function getStaticProps() {
 
   // Query For Portfolio Items
   const tags = await client.fetch(groq`
-    *[_type == "tag"]
+    *[_type == "tag"]{
+      title,
+      _createdAt,
+      _id,
+      slug
+    }
   `)
 
   // Query For Portfolio Tags

@@ -10,7 +10,7 @@ export default function LatestPosts({posts}) {
       <div className='row'>
       {posts.length > 0 && posts.map(
         ({_id, title = '', slug, publishedAt = '', mainImage}) =>
-          slug && (
+           (
             <div className='col-lg-4'  key={_id} >
               <InfoCard 
                 mainImage={mainImage}
