@@ -8,11 +8,13 @@ export default function Portfolio({portfolio, tags}) {
   // move 'featured' tab to the front of the array
   // const featured = tags.find(tag => tag.title === "featured");
 
+  // remove tags that are empty
+
   const [selected, setSelected] = useState("featured")
   const [data, setData] = useState([])
 
   useEffect(()=>{
-    const filteredItems = portfolio.filter((item) => item.tags.includes(selected))
+    const filteredItems = portfolio.filter((item) => item.tagList.includes(selected))
     setData(filteredItems)
   },[portfolio, selected])
 
@@ -29,9 +31,10 @@ export default function Portfolio({portfolio, tags}) {
       </div>
     </div>
     <div className="row ow-cols-sm-4 row-cols-md-3 ">
-      {data.length > 0 && data.map(({_id, title,summary, mainImage, tags})=>(
-        <div key={_id}><InfoCard className='portfolioCard'  href={'#'} as={'#'} title={title} subtitle={summary} mainImage={mainImage} tags={tags} /></div>
-      )
+      {data.length > 0 && data.map(({_id, title,summary, mainImage, tagList})=>
+        (
+          <div key={_id}><InfoCard className='portfolioCard'  href={'#'} as={'#'} title={title} subtitle={summary} mainImage={mainImage} tags={tagList} /></div>
+        )
       )}
     </div>
   </div>

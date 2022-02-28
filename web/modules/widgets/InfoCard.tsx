@@ -16,7 +16,7 @@ export default function InfoCard({href = '/', as = '', title = '', subtitle = ''
           <h6>{subtitle}</h6>
           <p>{content}</p>
           {tags.length > 0 && tags.map((tag)=>(
-            <span className='pill mini'>{tag}</span>
+            <span className='pill mini' key={tag}>{tag}</span>
           ))}
         </div>
       </div>

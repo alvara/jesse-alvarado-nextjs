@@ -19,7 +19,7 @@ export default function Index({posts, portfolio, tags}) {
     <>
       <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 text-center d-flex flex-column justify-content-end"><HeroHeader /></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><Philosophy /></Container>
-      <Container wrapperClass=""><Portfolio portfolio={portfolio} tags={tags}/></Container>
+      <Container wrapperClass="min-h-100"><Portfolio portfolio={portfolio} tags={tags}/></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><LatestPosts posts={posts} /></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center"><MySkills /></Container>
       {/* <Container wrapperClass="vh-100" className="h-100"><ContactMe /></Container> */}
@@ -63,16 +63,6 @@ export async function getStaticProps() {
     } | order(publishedAt desc)
   `)
 
-  // Query For Portfolio Items
-  const tags = await client.fetch(groq`
-    *[_type == "tag"]{
-      title,
-      _createdAt,
-      _id,
-      slug
-    }
-  `)
-
   // Query For Portfolio Tags
   const portfolio = await client.fetch(groq`
     *[_type == "portfolio"]{
@@ -81,10 +71,36 @@ export async function getStaticProps() {
       summary,
       slug,
       "mainImage": mainImage.asset->url,
-      "tags": tag[]->slug
+      "tags": tag[]->{title,slug,_id},
+      "tagList": tag[]->slug
     }
   `)
 
+  // Extract Tags from Portfolio and collect count
+  const tagsObj = {}
+  portfolio.forEach(item => {
+    item.tags.forEach(tag => {
+      // if no tag exists yet, add it
+      if(!tagsObj[tag.slug]){
+        tagsObj[tag.slug] = {
+          title: tag.title,
+          slug: tag.slug,
+          _id: tag._id,
+          count: 1
+        }
+      // tag already exists, increment counter
+      } 
+      else {
+        tagsObj[tag.slug].count += 1
+      }
+    })
+  })
+
+  // convert object of tags to array
+  const tags = []
+  Object.entries(tagsObj).forEach(
+    ([key,value]) => tags.push(value)
+  )
 
   return {
     props: {
