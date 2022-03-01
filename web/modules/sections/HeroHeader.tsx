@@ -29,10 +29,10 @@ export default function HeroHeader({title, subtitle, date, tags = [], img}) {
               layout="fixed" 
               width="900" 
               height="500vh" 
-              sizes="50vh" 
               objectFit='scale-down' 
               alt="Primary Image"
               className="rounded-full"
+              priority={true}
             />
           </div>
         )}
