@@ -17,7 +17,13 @@ export default function Index({posts, portfolio, tags, showcaseTags}) {
 
   return (
     <>
-      <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 text-center d-flex flex-column justify-content-end"><HeroHeader /></Container>
+      <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 text-center d-flex flex-column justify-content-end">
+        <HeroHeader 
+          img={'/personal-pic.png'} 
+          title={'Hi, Im Jesse'}
+          subtitle={'I build modern web applications and MVPs that are optimized in design and performance to help people.'}
+        />
+      </Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><Philosophy /></Container>
       <Container wrapperClass="min-h-100"><Portfolio portfolio={portfolio} tags={tags}/></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><LatestPosts posts={posts} /></Container>

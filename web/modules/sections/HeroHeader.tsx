@@ -1,16 +1,42 @@
 import Image from 'next/image'
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function HeroHeader() {
+export default function HeroHeader({title, subtitle, date, tags = [], img}) {
   return (
     <div className="row">
       <div className="col-md-12">
-        <h1>Hi, Im Jesse</h1>
-       <p>I build modern web applications and MVPs that are optimized in design and performance to help people.</p>
-        <div className="d-flex justify-content-center mt-5" >
-          <Image src="/personal-pic.png" layout="fixed" width="350" height="500vh" sizes="50vh" alt="test"/>
-        </div>
+       {title && (
+         <h1>{title}</h1>
+         )}
+         
+       {subtitle && (
+         <p>{subtitle}</p>
+         )}
+
+       {date && (
+         <p>{date}</p>
+         )}
+
+        {tags.length > 0 && tags.map((tag)=>(
+          <span className='pill mini' key={tag}>{tag}</span>
+        ))}
+
+        {img && (
+          <div className="d-flex justify-content-center mt-5" >
+            <Image src={img} layout="fixed" width="900" height="500vh" sizes="50vh" objectFit='scale-down' alt="Primary Image"/>
+          </div>
+        )}
       </div>
     </div>
   )
 }
+
+// Define Proptypes for PortfolioItem Component
+HeroHeader.propTypes = {
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  date: PropTypes.string,
+  tags: PropTypes.string,
+  img: PropTypes.string
+};

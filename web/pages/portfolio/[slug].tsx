@@ -8,6 +8,9 @@ import Head from 'next/head'
 import MainLayout from "../../modules/layouts/mainLayout"
 import client from '../../client'
 import getSanityImgUrl from '../../utils/getSanityImgUrl'
+import Container from '../../common/Container'
+import HeroHeader from '../../modules/sections/HeroHeader'
+import PostLayout from '../../modules/layouts/postLayout'
 
 // Configure Portable Text
 const ptComponents = {
@@ -30,8 +33,10 @@ const ptComponents = {
 // Declare Portfolio Item Component
 const PortfolioItem = (props) => {
   const post = props.post
+  console.log(post)
   return (
     <>
+
       <Head>
         {post?.title && (
          <title>{post.title}</title>
@@ -39,6 +44,17 @@ const PortfolioItem = (props) => {
 
         {/* TODO: add description to schema and insert here for each post */}
       </Head>
+
+      <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 text-center d-flex flex-column justify-content-end">
+        <HeroHeader 
+          img={post.mainImage} 
+          title={post.title}
+          subtitle={post.summary}
+          date={post.publishedDate}
+          tags={post.tags}
+        />
+      </Container>
+
       <article>
         <h1>{post?.title}</h1>
         <div>By {post?.author}</div>
@@ -92,7 +108,11 @@ const query = groq`*[_type == "portfolio" && slug.current == $slug][0]{
   "author": author->name,
   "categories": categories[]->title,
   "authorImg": author->image,
-  content
+  content,
+  "mainImage": mainImage.asset->url,
+  "tags": tag[]->title,
+  publishedAt,
+  summary
 }`
 
 // Define path for SSG pages '/portfolio/[slug]'.
