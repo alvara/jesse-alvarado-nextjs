@@ -54,7 +54,7 @@ const PortfolioItem = (props) => {
         />
       </Container>
 
-      <Container wrapperClass='bg-2 mt-5'>
+      <Container wrapperClass=''>
         <div className="row">
           <div className="col-2"></div>
           <div className="col-8">

@@ -24,13 +24,13 @@ export default function HeroHeader({title, subtitle, date, tags = [], img}) {
         ))}
 
         {img && (
-          <div className="d-flex justify-content-center mt-4" >
+          <div className="d-flex justify-content-center mt-4 rounded" >
             <Image 
               src={img} 
               layout="fixed" 
               width="900" 
-              height="320"
-              objectFit='scale-down' 
+              height="350"
+              objectFit={'scale-down'}
               alt="Primary Image"
               priority={true}
             />
@@ -48,5 +48,5 @@ HeroHeader.propTypes = {
   subtitle: PropTypes.string,
   date: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
-  img: PropTypes.string
+  img: PropTypes.string,
 };
