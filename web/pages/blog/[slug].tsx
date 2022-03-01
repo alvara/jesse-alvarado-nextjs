@@ -42,7 +42,7 @@ const Post = (props) => {
       {/* TODO: add description to schema and insert here for each post */}
     </Head>
 
-    <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 text-center d-flex flex-column justify-content-end">
+    <Container wrapperClass="vh-100-w-nav" className="h-100 text-center">
       <HeroHeader 
         img={post?.mainImage} 
         title={post?.title}
