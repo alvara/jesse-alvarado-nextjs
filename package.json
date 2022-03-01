@@ -4,7 +4,7 @@
   "version": "1.0.12",
   "scripts": {
     "build": "lerna run build --parallel",
-    "build-web": "lerna bootstrap && (cd web && npm run build)",
+    "build-web": "lerna bootstrap && (cd web && CI=true npm run build)",
     "build-studio": "lerna bootstrap && (cd studio && npm run build)",
     "dev": "lerna run dev --parallel",
     "format": "lerna run format",

@@ -46,6 +46,6 @@ HeroHeader.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
   date: PropTypes.string,
-  tags: PropTypes.string,
+  tags: PropTypes.arrayOf(PropTypes.string),
   img: PropTypes.string
 };
