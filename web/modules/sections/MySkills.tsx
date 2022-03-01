@@ -12,11 +12,10 @@ export default function MySkills({tags}) {
         <div className='col-md-7'>
           <div className='row row-cols-sm-6 row-cols-md-4 text-center'>
             {tags.map((tag)=>(
-              tag.title   
-            ))}
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
+            <div><Image src={tag.image} width="100" height="100" layout="responsive" objectFit='scale-down' alt="test" className="p-2"/>
+              <h5>{tag.title}</h5>
             </div>
+            ))}
           </div>
         </div>
         <div className='col-md-5'>
