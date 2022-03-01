@@ -12,7 +12,6 @@ export default function Portfolio({portfolio, tags}) {
 
   const [selected, setSelected] = useState("featured")
   const [data, setData] = useState([])
-
   useEffect(()=>{
     const filteredItems = portfolio.filter((item) => item.tagList.includes(selected))
     setData(filteredItems)
@@ -31,9 +30,9 @@ export default function Portfolio({portfolio, tags}) {
       </div>
     </div>
     <div className="row ow-cols-sm-4 row-cols-md-3 ">
-      {data.length > 0 && data.map(({_id, title,summary, mainImage, tagList})=>
+      {data.length > 0 && data.map(({_id, title, summary, mainImage, slug, tagList})=>
         (
-          <div key={_id}><InfoCard className='portfolioCard'  href={'#'} as={'#'} title={title} subtitle={summary} mainImage={mainImage} tags={tagList} /></div>
+          <div key={_id}><InfoCard className='portfolioCard' href={`/portfolio/${slug.current}`} title={title} subtitle={summary} mainImage={mainImage} tags={tagList} /></div>
         )
       )}
     </div>
