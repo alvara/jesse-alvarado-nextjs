@@ -34,6 +34,23 @@
     }
   }
 
+  // add to infoBox to transform into a Post Card for your blog
+  &.postCard {
+ 
+    background-color: white;
+    border-radius: 16px;
+    margin: 0;
+    padding: 0;
+
+    img {
+      border-radius: 16px 16px 0 0;
+    }
+  
+
+    .infoCard-content {
+      padding: 16px;
+    }
+  }
 
 } 
 
