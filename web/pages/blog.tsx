@@ -15,16 +15,16 @@ const Blog = ({posts}) => {
   return (
     <div>
       <Container wrapperClass="vh-100-w-nav" className="h-100 text-center">
+        <div>
       <HeroHeader 
         title={'Blog'}
         subtitle={'A collection of my written articles'}
       />
-
-<div className='text-center'>
+   <div className='text-center'>
       <div className='row'>
       {posts.length > 0 && posts.map(
         ({_id, title = '', slug, publishedAt = '', mainImage, categories}) =>
-           (
+            (
             <div className='col-lg-4'  key={_id} >
               <InfoCard 
                 className='postCard'
@@ -41,8 +41,11 @@ const Blog = ({posts}) => {
         )}
       </div>
     </div>
+    </div>
 
     </Container>  
+
+    
     </div>
   )
 }
