@@ -21,7 +21,7 @@ export default function Index({posts, portfolio, tags}) {
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><Philosophy /></Container>
       <Container wrapperClass="min-h-100"><Portfolio portfolio={portfolio} tags={tags}/></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><LatestPosts posts={posts} /></Container>
-      <Container wrapperClass="min-h-100 d-flex align-items-center"><MySkills /></Container>
+      <Container wrapperClass="min-h-100 d-flex align-items-center"><MySkills tags={tags}/></Container>
       {/* <Container wrapperClass="vh-100" className="h-100"><ContactMe /></Container> */}
     </>
   )
@@ -71,12 +71,12 @@ export async function getStaticProps() {
       summary,
       slug,
       "mainImage": mainImage.asset->url,
-      "tags": tag[]->{title,slug,_id},
+      "tags": tag[]->{title,slug,_id,showcase},
       "tagList": tag[]->slug
     }
   `)
 
-  // Extract Tags from Portfolio and collect count
+  // Count number of instances of a tag and store it
   const tagsObj = {}
   portfolio.forEach(item => {
     item.tags.forEach(tag => {
@@ -86,6 +86,7 @@ export async function getStaticProps() {
           title: tag.title,
           slug: tag.slug,
           _id: tag._id,
+          showcase: tag.showcase,
           count: 1
         }
       // tag already exists, increment counter

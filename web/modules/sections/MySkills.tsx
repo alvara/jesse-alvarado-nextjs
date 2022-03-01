@@ -1,7 +1,9 @@
 import Image from 'next/image'
 import React from 'react'
+import PropTypes from 'prop-types'
 
-export default function MySkills() {
+export default function MySkills({tags}) {
+  console.log("this is the taglist", tags)
   return (
     <div id="about">
       <h1 className='text-center'>Skills & Experience</h1>
@@ -76,4 +78,8 @@ export default function MySkills() {
     </div>
 
   )
+}
+
+MySkills.propTypes = {
+  tags: PropTypes.arrayOf(PropTypes.object)
 }
