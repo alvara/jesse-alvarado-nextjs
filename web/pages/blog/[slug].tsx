@@ -86,7 +86,7 @@ Post.propTypes = {
   content: PropTypes.arrayOf(PropTypes.object)
 };
 
-// Define path for SSG pages '/portfolio/[slug]'.
+// Define path for SSG pages '/blog/[slug]'.
 export async function getStaticPaths() {
   const paths = await client.fetch(
     `*[_type == "post" && defined(slug.current)][].slug.current`

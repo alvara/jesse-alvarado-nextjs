@@ -104,7 +104,7 @@ const query = groq`*[_type == "portfolio" && slug.current == $slug][0]{
 // Define path for SSG pages '/portfolio/[slug]'.
 export async function getStaticPaths() {
   const paths = await client.fetch(
-    `*[_type == "post" && defined(slug.current)][].slug.current`
+    `*[_type == "portfolio" && defined(slug.current)][].slug.current`
   )
 
   return {
