@@ -5,7 +5,8 @@ import PropTypes from 'prop-types'
 export default function HeroHeader({title, subtitle, date, tags = [], img}) {
   return (
     <div className="row">
-      <div className="col-md-12">
+      <div className="col-md-3"></div>
+      <div className="col-md-6">
        {title && (
          <h1>{title}</h1>
          )}
@@ -27,16 +28,16 @@ export default function HeroHeader({title, subtitle, date, tags = [], img}) {
             <Image 
               src={img} 
               layout="fixed" 
-              width="900" 
-              height="500vh" 
+              width="400" 
+              height="320"
               objectFit='scale-down' 
               alt="Primary Image"
-              className="rounded-full"
               priority={true}
             />
           </div>
         )}
       </div>
+      <div className="col-md-3"></div>
     </div>
   )
 }

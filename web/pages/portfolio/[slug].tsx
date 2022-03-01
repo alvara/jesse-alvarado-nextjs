@@ -44,7 +44,7 @@ const PortfolioItem = (props) => {
         {/* TODO: add description to schema and insert here for each post */}
       </Head>
 
-      <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 text-center d-flex flex-column justify-content-end">
+      <Container wrapperClass="vh-100-w-nav" className="h-100 text-center">
         <HeroHeader 
           img={post?.mainImage} 
           title={post?.title}
@@ -54,7 +54,7 @@ const PortfolioItem = (props) => {
         />
       </Container>
 
-      <Container wrapperClass=''>
+      <Container wrapperClass='bg-2 mt-5'>
         <div className="row">
           <div className="col-2"></div>
           <div className="col-8">
