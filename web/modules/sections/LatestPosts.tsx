@@ -4,20 +4,24 @@ import InfoCard from '../widgets/InfoCard'
 import Link from 'next/link'
 
 export default function LatestPosts({posts}) {
+  console.log(posts)
   return (
     <div className='text-center'>
       <h1>Latest Articles</h1>
       <div className='row'>
       {posts.length > 0 && posts.map(
-        ({_id, title = '', slug, publishedAt = '', mainImage}) =>
+        ({_id, title = '', slug, publishedAt = '', mainImage, categories}) =>
            (
             <div className='col-lg-4'  key={_id} >
               <InfoCard 
+                className='portfolioCard'
                 mainImage={mainImage}
                 href={"/blog/[slug]"}
                 as={`/blog/${slug.current}`} 
                 title={title} 
                 subtitle={new Date(publishedAt).toDateString()}
+                tags={categories}
+                
               />
             </div>
           )
