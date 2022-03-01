@@ -33,7 +33,9 @@ export default function MySkills({tags}) {
             <div className='col-md-3'>Certifications</div>
             <div className='col-md-9 mb-3'>
               Ruby on Rails Bootcamp 2021<br /> 
-              Le Wagon - Tokyo (2021)<br /><br />
+              Le Wagon - Tokyo (2021)<br/>
+              <Link href="/lewagon-certificate.pdf">Certificate</Link>
+              <br /><br />
 
             Google Cloud Essentials<br/>
             <Link href="https://www.cloudskillsboost.google/public_profiles/e6ee1b1f-fdc4-4ef4-a99f-95176b203d30">Google Skill badge</Link><br/><br/>
