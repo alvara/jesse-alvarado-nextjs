@@ -8,7 +8,7 @@ export default function Philosophy() {
         <div className="col-md-3">
           <InfoCard 
             title='Result Oriented'
-            content='I focus on the end result first, building prioritized features with an iterative approach to quickly deliver a MVP.'
+            content='I focus on the end result first, building prioritized features with an iterative approach to quickly deliver.'
             mainImage='/result-oriented.jpg'
           />
         </div>
