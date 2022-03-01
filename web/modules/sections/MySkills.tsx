@@ -12,18 +12,21 @@ export default function MySkills({tags}) {
         <div className='col-md-7'>
           <div className='row row-cols-sm-6 row-cols-md-4 text-center'>
             {tags.map((tag)=>(
-            <div><Image src={tag.image} width="100" height="100" layout="responsive" objectFit='scale-down' alt="test" className="p-2"/>
-              <h5>{tag.title}</h5>
+            <div key={tag._id}>
+              <div className='circle-icon'>
+                <Image src={tag.image} width="100" height="100" layout="responsive" objectFit='scale-down' alt="test" className="p-4"/>
+              </div>
+              <h6>{tag.title}</h6>
             </div>
             ))}
           </div>
         </div>
         <div className='col-md-5'>
-          <p>I'm a self-driven, team-oriented full stack developer with a background in web development. I aim to solve problems and drive results for clients by developing web applications that are fast in performance, flexible in design, and typed in clean code for easy collaboration and maintenance.</p>
+          <p>I'm a self-driven, team-oriented full stack developer with a background in web development.</p><p>I aim to solve problems and drive results for clients by developing web applications that are fast in performance, flexible in design, and typed in clean code for easy collaboration and maintenance.</p>
           <p>I am currently focused on learning and applying Go(Golang) and Google Cloud Platform (GCP) services to projects that are built on NextJS.</p>
           <div className='row'>
             <div className='col-md-3'>Work Experience</div>
-            <div className='col-md-9'><h5>Full Stack Developer</h5><h5>Beams Inc.</h5></div>
+            <div className='col-md-9'>Full Stack Developer<br/>Beams Inc.</div>
             <div className='col-md-3'>Education</div>
             <div className='col-md-9'>Western Washington University</div>
             <div className='col-md-3'>Certifications</div>
