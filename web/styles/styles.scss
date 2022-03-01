@@ -15,6 +15,7 @@ $gray-900: #333;
 $headings-color: #333;
 $body-color: lighten($headings-color, 27%); // for all text on site
 
+
 $font-family-sans-serif: 'Open Sans', Sans-Serif; // base font
 $headings-font-family: 'Work Sans', Sans-Serif; // headings font
 $font-size-base: 1.1rem;
@@ -67,13 +68,14 @@ body {
 // @import "bootstrap/scss/offcanvas";
 // @import "bootstrap/scss/placeholders";
 
-// Bootstrap Helpers
+// Bootstrap Helpersv
 // @import "bootstrap/scss/helpers";
 
 // Bootstrap Utilities
 @import "bootstrap/scss/utilities/api";
 
 // custom styles
+@import 'typography';
 @import 'spacing';
 @import 'container';
 @import 'nav';
