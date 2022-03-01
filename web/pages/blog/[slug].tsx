@@ -4,10 +4,13 @@ import groq from 'groq'
 import {PortableText} from '@portabletext/react'
 import PropTypes from "prop-types"
 
-import PostLayout from "../../modules/layouts/postLayout"
+import MainLayout from "../../modules/layouts/mainLayout"
 import client from '../../client'
 import getSanityImgUrl from '../../utils/getSanityImgUrl'
 import Head from 'next/head'
+import Container from '../../common/Container'
+import HeroHeader from '../../modules/sections/HeroHeader'
+
 
 const ptComponents = {
   types: {
@@ -30,59 +33,60 @@ const Post = (props) => {
   const post = props.post
   return (
     <>
-      <Head>
-        {post?.title && (
-         <title>{post.title}</title>
-        )}
 
-        {/* TODO: add description to schema and insert here for each post */}
-      </Head>
-      <article>
-        <h1>{post?.title}</h1>
-        <div>By {post?.author}</div>
-
-      {post?.categories && (
-        <ul>
-          {post?.categories.map(category => <li key={category}>{category}</li>)}
-        </ul>
+    <Head>
+      {post?.title && (
+       <title>{post.title}</title>
       )}
 
-      {post?.authorImg && (
-        <div>
-          <img src={getSanityImgUrl(post?.authorImg).width(150).url()} alt='author'/>
-        </div>
-      )}
+      {/* TODO: add description to schema and insert here for each post */}
+    </Head>
 
+    <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 text-center d-flex flex-column justify-content-end">
+      <HeroHeader 
+        img={post.mainImage} 
+        title={post.title}
+        subtitle={post.summary}
+        date={post.publishedDate}
+        tags={post.tags}
+      />
+    </Container>
 
-      {post?.content && (
-        <PortableText
+    <Container wrapperClass=''>
+      <div className="row">
+        <div className="col-2"></div>
+        <div className="col-8">
+        {post?.content && (
+          <PortableText
           value={post.content}
           components={ptComponents}
-        />
-        )}
-      </article>
-    </>
+          />
+          )}
+        </div>
+          <div className="col-2"></div>
+      </div>
+    </Container>
+  </>
   )
 }
 
-// Get the main template for standard pages
+// Load Page in Layout
 Post.getLayout = function getLayout(page: ReactElement) {
   return (
-    <PostLayout>
+    <MainLayout>
       {page}
-    </PostLayout>
+    </MainLayout>
   )
 }
 
+// Define Proptypes for Post Component
 Post.propTypes = {
   post: PropTypes.object,
   title: PropTypes.string,
-  author: PropTypes.string,
-  authorImg: PropTypes.string,
-  categories: PropTypes.arrayOf(PropTypes.string),
   content: PropTypes.arrayOf(PropTypes.object)
 };
 
+// Define path for SSG pages '/portfolio/[slug]'.
 export async function getStaticPaths() {
   const paths = await client.fetch(
     `*[_type == "post" && defined(slug.current)][].slug.current`
@@ -94,13 +98,16 @@ export async function getStaticPaths() {
   }
 }
 
-// Create query from Sanity
+// Query for current post item
 const query = groq`*[_type == "post" && slug.current == $slug][0]{
   title,
   "author": author->name,
   "categories": categories[]->title,
   "authorImg": author->image,
-  content
+  content,  
+  "mainImage": mainImage.asset->url,
+  "tags": categories[]->title,
+  publishedAt,
 }`
 
 export async function getStaticProps(context) {

@@ -10,7 +10,6 @@ import client from '../../client'
 import getSanityImgUrl from '../../utils/getSanityImgUrl'
 import Container from '../../common/Container'
 import HeroHeader from '../../modules/sections/HeroHeader'
-import PostLayout from '../../modules/layouts/postLayout'
 
 // Configure Portable Text
 const ptComponents = {
@@ -55,7 +54,7 @@ const PortfolioItem = (props) => {
         />
       </Container>
 
-      <Container>
+      <Container wrapperClass=''>
         <div className="row">
           <div className="col-2"></div>
           <div className="col-8">
