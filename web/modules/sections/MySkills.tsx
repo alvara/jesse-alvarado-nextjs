@@ -4,58 +4,16 @@ import PropTypes from 'prop-types'
 
 export default function MySkills({tags}) {
   console.log("this is the taglist", tags)
+  // filter out only 
   return (
     <div id="about">
       <h1 className='text-center'>Skills & Experience</h1>
       <div className='row'>
         <div className='col-md-7'>
           <div className='row row-cols-sm-6 row-cols-md-4 text-center'>
-
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
-            <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
-              skill
-            </div>
+            {tags.map((tag)=>(
+              tag.title   
+            ))}
             <div><Image src={'https://via.placeholder.com/100x100'} width="100" height="100" layout="responsive" alt="test" className="mb-4"/>
               skill
             </div>

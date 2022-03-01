@@ -13,7 +13,7 @@ import MySkills from '../modules/sections/MySkills'
 import Container from '../common/Container'
 
 // index.js
-export default function Index({posts, portfolio, tags}) {
+export default function Index({posts, portfolio, tags, showcaseTags}) {
 
   return (
     <>
@@ -21,7 +21,7 @@ export default function Index({posts, portfolio, tags}) {
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><Philosophy /></Container>
       <Container wrapperClass="min-h-100"><Portfolio portfolio={portfolio} tags={tags}/></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><LatestPosts posts={posts} /></Container>
-      <Container wrapperClass="min-h-100 d-flex align-items-center"><MySkills tags={tags}/></Container>
+      <Container wrapperClass="min-h-100 d-flex align-items-center"><MySkills tags={showcaseTags}/></Container>
       {/* <Container wrapperClass="vh-100" className="h-100"><ContactMe /></Container> */}
     </>
   )
@@ -41,6 +41,7 @@ Index.propTypes = {
   posts: PropTypes.arrayOf(PropTypes.object),
   portfolio: PropTypes.arrayOf(PropTypes.object),
   tags: PropTypes.arrayOf(PropTypes.object),
+  showcaseTags: PropTypes.arrayOf(PropTypes.object),
 }
 
 export async function getStaticProps() {
@@ -71,7 +72,13 @@ export async function getStaticProps() {
       summary,
       slug,
       "mainImage": mainImage.asset->url,
-      "tags": tag[]->{title,slug,_id,showcase},
+      "tags": tag[]->{
+        title,
+        slug,
+        _id,
+        showcase,
+        "image" : image.asset->url
+      },
       "tagList": tag[]->slug
     }
   `)
@@ -87,6 +94,7 @@ export async function getStaticProps() {
           slug: tag.slug,
           _id: tag._id,
           showcase: tag.showcase,
+          image: tag.image,
           count: 1
         }
       // tag already exists, increment counter
@@ -103,11 +111,15 @@ export async function getStaticProps() {
     ([key,value]) => tags.push(value)
   )
 
+  // Get tags that are to be showcased in the skills&experience section
+  const showcaseTags = tags.filter((tag)=>(tag.showcase === true))
+
   return {
     props: {
       posts,
       portfolio,
-      tags
+      tags,
+      showcaseTags
     }
   }
 }
