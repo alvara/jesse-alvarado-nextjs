@@ -55,30 +55,20 @@ const PortfolioItem = (props) => {
         />
       </Container>
 
-      <article>
-        <h1>{post?.title}</h1>
-        <div>By {post?.author}</div>
-
-      {post?.categories && (
-        <ul>
-          {post?.categories.map(category => <li key={category}>{category}</li>)}
-        </ul>
-      )}
-
-      {post?.authorImg && (
-        <div>
-          <img src={getSanityImgUrl(post?.authorImg).width(150).url()} alt='author'/>
+      <Container>
+        <div className="row">
+          <div className="col-2"></div>
+          <div className="col-8">
+          {post?.content && (
+            <PortableText
+            value={post.content}
+            components={ptComponents}
+            />
+            )}
+          </div>
+            <div className="col-2"></div>
         </div>
-      )}
-
-
-      {post?.content && (
-        <PortableText
-          value={post.content}
-          components={ptComponents}
-        />
-        )}
-      </article>
+      </Container>
     </>
   )
 }
@@ -96,9 +86,6 @@ PortfolioItem.getLayout = function getLayout(page: ReactElement) {
 PortfolioItem.propTypes = {
   post: PropTypes.object,
   title: PropTypes.string,
-  author: PropTypes.string,
-  authorImg: PropTypes.string,
-  categories: PropTypes.arrayOf(PropTypes.string),
   content: PropTypes.arrayOf(PropTypes.object)
 };
 

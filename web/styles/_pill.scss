@@ -1,5 +1,5 @@
 .pill {
-  background-color: $secondary;
+  background-color: darken($secondary, 12%);
   color: #fff;
   display: inline-block;
   margin: 6px 6px;
@@ -7,7 +7,7 @@
   border-radius: 6px;
 
   &:hover {
-    background-color: #c0c2c9;
+    background-color: darken($secondary, 15%);
     cursor: pointer;
   }
 
