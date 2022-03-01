@@ -24,7 +24,16 @@ export default function HeroHeader({title, subtitle, date, tags = [], img}) {
 
         {img && (
           <div className="d-flex justify-content-center mt-5" >
-            <Image src={img} layout="fixed" width="900" height="500vh" sizes="50vh" objectFit='scale-down' alt="Primary Image"/>
+            <Image 
+              src={img} 
+              layout="fixed" 
+              width="900" 
+              height="500vh" 
+              sizes="50vh" 
+              objectFit='scale-down' 
+              alt="Primary Image"
+              className="rounded-full"
+            />
           </div>
         )}
       </div>
