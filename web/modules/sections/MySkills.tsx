@@ -1,6 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 import PropTypes from 'prop-types'
+import Link from 'next/link'
 
 export default function MySkills({tags}) {
   console.log("this is the taglist", tags)
@@ -26,12 +27,20 @@ export default function MySkills({tags}) {
           <p>I am currently focused on learning and applying Go(Golang) and Google Cloud Platform (GCP) services to projects that are built on NextJS.</p>
           <div className='row'>
             <div className='col-md-3'>Work Experience</div>
-            <div className='col-md-9'>Full Stack Developer<br/>Beams Inc.</div>
+            <div className='col-md-9 mb-3'>Full Stack Developer<br/>Beams Inc. (2016-2021)</div>
             <div className='col-md-3'>Education</div>
-            <div className='col-md-9'>Western Washington University</div>
+            <div className='col-md-9 mb-3'>BA in Management Information Systems<br/>Western Washington University</div>
             <div className='col-md-3'>Certifications</div>
-            <div className='col-md-9'>Google Skill Badges - Firebase, Google Cloud Basics<br />Le Wagon - Ruby on Rails Bootcamp 2021</div>
-            <div className='col-md-9'></div>
+            <div className='col-md-9 mb-3'>
+              Ruby on Rails Bootcamp 2021<br /> 
+              Le Wagon - Tokyo (2021)<br /><br />
+
+            Google Cloud Essentials<br/>
+            <Link href="https://www.cloudskillsboost.google/public_profiles/e6ee1b1f-fdc4-4ef4-a99f-95176b203d30">Google Skill badge</Link><br/><br/>
+
+            Serverless Firebase Development<br/>
+            <Link href="https://www.cloudskillsboost.google/public_profiles/e6ee1b1f-fdc4-4ef4-a99f-95176b203d30">Google Skill badge</Link>            
+            </div>      
           </div>
         </div>
       </div>
