@@ -27,7 +27,7 @@ export default function LatestPosts({posts}) {
           )
         )}
       </div>
-      <Link href={'/blog'}><button>Read More Articles</button></Link>
+      <Link href={'/blog'}><button className='btn'>Read More Articles</button></Link>
     </div>
   )
 }
