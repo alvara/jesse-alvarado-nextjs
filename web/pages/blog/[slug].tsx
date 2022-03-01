@@ -44,11 +44,11 @@ const Post = (props) => {
 
     <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 text-center d-flex flex-column justify-content-end">
       <HeroHeader 
-        img={post.mainImage} 
-        title={post.title}
-        subtitle={post.summary}
-        date={post.publishedDate}
-        tags={post.tags}
+        img={post?.mainImage} 
+        title={post?.title}
+        subtitle={post?.summary}
+        date={post?.publishedDate}
+        tags={post?.tags}
       />
     </Container>
 
