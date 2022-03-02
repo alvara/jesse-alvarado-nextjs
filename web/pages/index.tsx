@@ -21,7 +21,7 @@ export default function Index({posts, portfolio, tags, showcaseTags}) {
         <HeroHeader 
           img={'/personal-pic.png'} 
           title={'Hi, Im Jesse'}
-          subtitle={'I build modern web applications and MVPs that are optimized in design and performance to help people.'}
+          subtitle={'I build modern web applications that are optimized in design and performance to empower businesses.'}
         />
       </Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><Philosophy /></Container>
