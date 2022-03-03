@@ -2,7 +2,7 @@ import Image from 'next/image'
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function HeroHeader({title, subtitle, date, tags = [], img}) {
+export default function HeroHeader({title, subtitle, date, tags = [], img, orientation = 'portrait'}) {
   return (
     <div className="row">
       <div className="col-md-12">
@@ -24,21 +24,15 @@ export default function HeroHeader({title, subtitle, date, tags = [], img}) {
 
         {img && (
           <div className="image-container d-flex justify-content-center mt-4 rounded" >
-            <Image 
-              src={img} 
-              layout="intrinsic" 
-              width="600" 
-              height="300"
-              objectFit={'contain'}
-              alt="Header"
-              quality={50}
-              priority={true}
-              className="image"
-            />
+              {orientation === 'landscape' ? (
+                // landscape orientation - 
+                <Image  src={img} width="800" height="500" layout="intrinsic" objectFit={'cover'} alt="Header" quality={50} priority={true} className="image"/>
+                ) : (
+                <Image  src={img}  layout="fill" objectFit={'scale-down'} alt="Header" quality={50} priority={true} className="image"/>
+              )}
           </div>
         )}
       </div>
-      <div className="col-md-3"></div>
     </div>
   )
 }
@@ -50,4 +44,5 @@ HeroHeader.propTypes = {
   date: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string),
   img: PropTypes.string,
+  orientation: PropTypes.string
 };

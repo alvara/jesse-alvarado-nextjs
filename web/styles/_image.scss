@@ -1,5 +1,5 @@
 .image-container {
-  max-height: 53vh;
+  height: 53vh;
   border-radius: 50px !important;
   overflow: hidden;
   position: relative;
@@ -9,7 +9,6 @@
   .image {
     width: 100% !important;
     height: unset !important;
-    object-fit: scale;
     // max-width: 500px !important;
   }
 }
