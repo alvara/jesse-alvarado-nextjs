@@ -15,7 +15,7 @@ export default function HeroHeader({title, subtitle, date, tags = [], img}) {
          )}
 
        {date && (
-         <p>{date}</p>
+         <p>{new Date(date).toDateString()}</p>
          )}
 
         {tags.length > 0 && tags.map((tag)=>(

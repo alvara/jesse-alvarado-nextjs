@@ -32,6 +32,7 @@ const Blog = ({posts}) => {
                 href={"/blog/[slug]"}
                 as={`/blog/${slug.current}`} 
                 title={title} 
+                content={publishedAt}
                 subtitle={new Date(publishedAt).toDateString()}
                 tags={categories}
                 height={140}

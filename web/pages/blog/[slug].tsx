@@ -47,7 +47,7 @@ const Post = (props) => {
         img={post?.mainImage} 
         title={post?.title}
         subtitle={post?.summary}
-        date={post?.publishedDate}
+        date={post?.publishedAt}
         tags={post?.tags}
       />
     </Container>

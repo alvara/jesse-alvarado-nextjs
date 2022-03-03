@@ -48,7 +48,6 @@ const PortfolioItem = (props) => {
           img={post?.mainImage} 
           title={post?.title}
           subtitle={post?.summary}
-          date={post?.publishedDate}
           tags={post?.tags}
         />
       </Container>
