@@ -4,7 +4,6 @@ import InfoCard from '../widgets/InfoCard'
 import Link from 'next/link'
 
 export default function LatestPosts({posts}) {
-  console.log(posts)
   return (
     <div className='text-center'>
       <h1>Latest Articles</h1>

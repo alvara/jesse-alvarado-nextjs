@@ -44,7 +44,7 @@ const PortfolioItem = (props) => {
         {/* TODO: add description to schema and insert here for each post */}
       </Head>
 
-      <Container wrapperClass="vh-100-w-nav" className="h-100 text-center">
+      <Container wrapperClass="vh-100-w-nav" className="h-100 d-flex align-items-center justify-content-center text-center">
         <HeroHeader 
           img={post?.mainImage} 
           title={post?.title}

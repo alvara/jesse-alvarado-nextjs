@@ -10,7 +10,7 @@ export default function Portfolio({portfolio, tags}) {
 
   // remove tags that are empty
 
-  const [selected, setSelected] = useState("featured")
+  const [selected, setSelected] = useState("_featured")
   const [data, setData] = useState([])
   useEffect(()=>{
     const filteredItems = portfolio.filter((item) => item.tagList.includes(selected))

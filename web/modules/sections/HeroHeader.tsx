@@ -5,8 +5,7 @@ import PropTypes from 'prop-types'
 export default function HeroHeader({title, subtitle, date, tags = [], img}) {
   return (
     <div className="row">
-      <div className="col-md-3"></div>
-      <div className="col-md-6">
+      <div className="col-md-12">
        {title && (
          <h1>{title}</h1>
          )}

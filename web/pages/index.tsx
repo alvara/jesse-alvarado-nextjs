@@ -26,7 +26,7 @@ export default function Index({posts, portfolio, tags, showcaseTags}) {
       </Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><Philosophy /></Container>
       <Container wrapperClass="min-h-100"><Portfolio portfolio={portfolio} tags={tags}/></Container>
-      <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><LatestPosts posts={posts} /></Container>
+      <Container wrapperClass="d-flex align-items-center bg-2"><LatestPosts posts={posts} /></Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center"><MySkills tags={showcaseTags}/></Container>
       {/* <Container wrapperClass="vh-100" className="h-100"><ContactMe /></Container> */}
     </>
