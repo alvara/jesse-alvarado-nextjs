@@ -8,7 +8,11 @@ export default function Document() {
     <Html>
       <Head>
         {/* Google Font */}
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300|Work+Sans:300&display=swap" rel="stylesheet"></link>
+        <link rel="preconnect" href="https://fonts.googleapis.com"></link>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin></link>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Work+Sans:wght@300;500&display=swap" rel="stylesheet"></link>
+
+        
       </Head>
       <body>
         <Main />

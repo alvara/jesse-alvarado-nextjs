@@ -15,7 +15,7 @@ export default function Portfolio({portfolio, tags}) {
 
   return (
     <div id="portfolio" className="h-100 text-center d-flex flex-column justify-content-center">
-    <h1><strong>Projects</strong>  I&apos;ve worked on</h1>
+    <h1><strong>Projects</strong>  I&apos;ve Worked On</h1>
     <div className='row'>
       <div className='col'>
           {tags.length > 0 && tags.map(
@@ -28,7 +28,7 @@ export default function Portfolio({portfolio, tags}) {
     <div className="row ow-cols-sm-4 row-cols-md-3 ">
       {data.length > 0 && data.map(({_id, title, summary, mainImage, slug, tags})=>
         (
-          <div key={_id}><InfoCard className='portfolioCard' href={`/portfolio/${slug.current}`} title={title} subtitle={summary} mainImage={mainImage} tags={tags} /></div>
+          <div key={_id}><InfoCard className='portfolioCard' href={`/portfolio/${slug.current}`} title={title} content={summary} mainImage={mainImage} tags={tags} /></div>
         )
       )}
     </div>
