@@ -4,7 +4,6 @@ import Link from 'next/link'
 import PropTypes from 'prop-types'
 
 export default function InfoCard({href = '/', as = '', title = '', subtitle = '', content, mainImage = 'https://via.placeholder.com/300x300', className, tags = [], height = 250}) {
-  
   const disableLink = href !== '/' ? '' : 'disable-link'
   return (
     <Link href={href} as={as}>
@@ -16,7 +15,7 @@ export default function InfoCard({href = '/', as = '', title = '', subtitle = ''
           <h6>{subtitle}</h6>
           <p>{content}</p>
           {tags.length > 0 && tags.map((tag)=>(
-            <span className='pill mini' key={tag}>{tag}</span>
+            <span className='pill mini' key={tag.title}>{tag.title}</span>
           ))}
         </div>
       </div>
@@ -34,5 +33,5 @@ InfoCard.propTypes = {
   mainImage: PropTypes.string,
   className: PropTypes.string,
   height: PropTypes.number,
-  tags : PropTypes.arrayOf(PropTypes.string)
+  tags : PropTypes.arrayOf(PropTypes.object)
 }

@@ -32,7 +32,6 @@ const ptComponents = {
 // Declare Portfolio Item Component
 const PortfolioItem = (props) => {
   const post = props.post
-  console.log(post)
   return (
     <>
 

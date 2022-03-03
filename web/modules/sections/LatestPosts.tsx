@@ -9,7 +9,7 @@ export default function LatestPosts({posts}) {
       <h1>Latest Articles</h1>
       <div className='row'>
       {posts.length > 0 && posts.map(
-        ({_id, title = '', slug, publishedAt = '', mainImage, categories}) =>
+        ({_id, title = '', slug, publishedAt = '', mainImage, categories = []}) =>
            (
             <div className='col-lg-4'  key={_id} >
               <InfoCard 
