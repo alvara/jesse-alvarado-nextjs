@@ -1,15 +1,10 @@
 .image-container {
-  max-height: 200px;
-
-  > div {
-    position: unset !important;
-  }
+  max-height: 50vh;
 
   .image {
-    object-fit: scale-down;
     width: 100% !important;
-    position: relative !important;
     height: unset !important;
-    max-width: 500px !important;
+    object-fit: scale;
+    // max-width: 500px !important;
   }
 }
