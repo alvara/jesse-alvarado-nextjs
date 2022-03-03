@@ -1,5 +1,10 @@
 .image-container {
-  max-height: 50vh;
+  max-height: 53vh;
+  border-radius: 50px !important;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
 
   .image {
     width: 100% !important;

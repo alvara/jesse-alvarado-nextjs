@@ -27,9 +27,9 @@ export default function HeroHeader({title, subtitle, date, tags = [], img}) {
             <Image 
               src={img} 
               layout="intrinsic" 
-              width="500" 
-              height="500"
-              objectFit={'scale-down'}
+              width="600" 
+              height="300"
+              objectFit={'contain'}
               alt="Header"
               quality={50}
               priority={true}
