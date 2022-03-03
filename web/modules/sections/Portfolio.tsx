@@ -4,14 +4,10 @@ import PropTypes from 'prop-types'
 import InfoCard from '../widgets/InfoCard'
 export default function Portfolio({portfolio, tags}) {
 
-  // TODO: Move featured tag to the front of the array
-  // move 'featured' tab to the front of the array
-  // const featured = tags.find(tag => tag.title === "featured");
-
-  // remove tags that are empty
-
   const [selected, setSelected] = useState("_featured")
+
   const [data, setData] = useState([])
+  
   useEffect(()=>{
     const filteredItems = portfolio.filter((item) => item.tagList.includes(selected))
     setData(filteredItems)

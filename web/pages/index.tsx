@@ -112,15 +112,13 @@ export async function getStaticProps() {
   })
 
   // convert object of tags to array
-  const tags = []
+  let tags = []
   Object.entries(tagsObj).forEach(
     ([key,value]) => tags.push(value)
   )
 
-  console.log("this is the array", tags)
   // sort tags by slug
-  // tags.sort((a, b) => (a.slug > b.slug ? 1 : 1))
-
+  tags = tags.sort((a,b) => (a.slug > b.slug) ? 1 : ((b.slug > a.slug) ? -1 : 0))
 
   // Get tags that are to be showcased in the skills&experience section
   const showcaseTags = tags.filter((tag)=>(tag.showcase === true))
