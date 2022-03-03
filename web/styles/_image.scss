@@ -1,13 +1,18 @@
 .image-container {
-  height: 53vh;
+  height: 54vh;
   border-radius: 50px !important;
   overflow: hidden;
   position: relative;
   width: 100%;
+  
+  @include media-breakpoint-only(xs) {
+    // add min height so blog banners can scale down
+    height: 40vh;
+  }
+
 
 
   .image {
-    width: 100% !important;
     height: unset !important;
     // max-width: 500px !important;
   }
