@@ -4,7 +4,6 @@ import PropTypes from 'prop-types'
 import Link from 'next/link'
 
 export default function MySkills({tags}) {
-  console.log("this is the taglist", tags)
   // filter out only 
   return (
     <div id="about">

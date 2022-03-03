@@ -86,7 +86,7 @@ export async function getStaticProps() {
         "image" : image.asset->url
       },
       "tagList": tag[]->slug
-    }
+    } | order(publishedAt desc)
   `)
 
   // Count number of instances of a tag and store it
@@ -116,6 +116,11 @@ export async function getStaticProps() {
   Object.entries(tagsObj).forEach(
     ([key,value]) => tags.push(value)
   )
+
+  console.log("this is the array", tags)
+  // sort tags by slug
+  // tags.sort((a, b) => (a.slug > b.slug ? 1 : 1))
+
 
   // Get tags that are to be showcased in the skills&experience section
   const showcaseTags = tags.filter((tag)=>(tag.showcase === true))
