@@ -9,26 +9,29 @@ export default function MySkills({tags}) {
     <div id="about">
       <h1 className='text-center'>Skills & Experience</h1>
       <div className='row'>
-        <div className='col-md-7'>
-          <div className='row row-cols-sm-6 row-cols-md-4 text-center'>
+        <div className='col-sm-12 col-md-12 col-lg-6'>
+          {/* Skill Icons */}
+          <div className='row row-cols-2 row-cols-sm-3 row-cols-lg-3 row-cols-xl-4  text-center'>
             {tags.map((tag)=>(
-            <div key={tag._id}>
-              <div className='circle-icon'>
+            <div key={tag._id} >
+              <div className='circle-icon '>
                 <Image src={tag.image} width="100" height="100" layout="responsive" objectFit='scale-down' alt="test" className="p-4"/>
               </div>
-              <h6>{tag.title}</h6>
+              <h6 className='mb-4 mb-sm-5'>{tag.title}</h6>
             </div>
             ))}
           </div>
         </div>
-        <div className='col-md-5'>
+        <div className='col-sm-12 col-md-12 col-lg-6'>
+          {/* Bio and History */}
+          <h6 className='mt-md-5 mt-lg-0'>About Me</h6>
           <p>I'm a self-driven, team-oriented full stack developer with a background in web development.</p><p>I aim to solve problems and drive results for clients by developing web applications that are fast in performance, flexible in design, and typed in clean code for easy collaboration and maintenance.</p>
           <p>I am currently focused on learning and applying Go(Golang) and Google Cloud Platform (GCP) services to projects that are built on NextJS.</p>
           <div className='row'>
             <div className='col-12'>
               <div className="table-responsive">
-              <table className="table caption-top">
-                <caption>History</caption>
+              <h6>History</h6>
+              <table className="table">
                 <tbody>
                   <tr>
                     <th scope="row">Work Experience</th>
