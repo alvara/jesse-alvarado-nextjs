@@ -31,6 +31,7 @@ export default function HeroHeader({title, subtitle, date, tags = [], img}) {
               height="350"
               objectFit={'scale-down'}
               alt="Primary Image"
+              quality={50}
               priority={true}
             />
           </div>
