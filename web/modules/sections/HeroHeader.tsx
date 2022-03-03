@@ -11,7 +11,7 @@ export default function HeroHeader({title, subtitle, date, tags = [], img}) {
          )}
          
        {subtitle && (
-         <>{subtitle}</>
+         <p>{subtitle}</p>
          )}
 
        {date && (
