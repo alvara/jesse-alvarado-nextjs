@@ -9,13 +9,13 @@ export default function InfoCard({href = '/', as = '', title = '', subtitle = ''
     <Link href={href} as={as}>
       <a className={`infoCard-wrapper ${disableLink}`}>
       <div className={`infoCard text-start m-3  ${className}`}>
-        <Image src={mainImage} width="250" height={height} layout="responsive" objectFit='scale-down' alt="test" className="" quality={30}/>
+        <Image src={mainImage} width="250" height={height} layout="responsive" objectFit='scale-down' alt="test" className="" quality={30} priority/>
         <div className='infoCard-content'>
           <h5 className='pt-3'>{title}</h5>
           <h6>{subtitle}</h6>
           <p>{content}</p>
           {tags.length > 0 && tags.map((tag)=>(
-            <span className='pill mini' key={tag.title}>{tag.title}</span>
+            <span className='pill mini' key={tag._id}>{tag.title}</span>
           ))}
         </div>
       </div>

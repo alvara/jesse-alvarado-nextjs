@@ -11,7 +11,6 @@ import InfoCard from '../modules/widgets/InfoCard'
 
 // view all blog posts
 const Blog = ({posts}) => {
-
   return (
     <div>
       <Container wrapperClass="vh-100-w-nav" className="h-100 text-center">
@@ -25,16 +24,15 @@ const Blog = ({posts}) => {
       {posts.length > 0 && posts.map(
         ({_id, title = '', slug, publishedAt = '', mainImage, categories}) =>
             (
-            <div className='col-lg-4'  key={_id} >
+            <div className='col-lg-4'  key={`${_id}`} >
               <InfoCard 
                 className='postCard'
                 mainImage={mainImage}
                 href={"/blog/[slug]"}
                 as={`/blog/${slug.current}`} 
                 title={title} 
-                content={publishedAt}
-                subtitle={new Date(publishedAt).toDateString()}
                 tags={categories}
+                subtitle={new Date(publishedAt).toDateString()}
                 height={140}
               />
             </div>
@@ -45,8 +43,6 @@ const Blog = ({posts}) => {
     </div>
 
     </Container>  
-
-    
     </div>
   )
 }
@@ -71,7 +67,10 @@ export async function getStaticProps() {
   const posts = await client.fetch(groq`
   *[_type == "post" && publishedAt < now()][0..2]{
     "author": author->name,
-    "categories": categories[]->title,
+    "categories": categories[]->{
+      _id,
+      title
+    },
     content,
     publishedAt,
     slug,

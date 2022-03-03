@@ -56,6 +56,7 @@ export async function getStaticProps() {
     *[_type == "post" && publishedAt < now()][0..2]{
       "author": author->name,
       "categories": categories[]->{
+        _id,
         title,
         slug
       },
