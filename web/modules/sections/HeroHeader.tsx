@@ -23,16 +23,17 @@ export default function HeroHeader({title, subtitle, date, tags = [], img}) {
         ))}
 
         {img && (
-          <div className="d-flex justify-content-center mt-4 rounded" >
+          <div className="image-container d-flex justify-content-center mt-4 rounded" >
             <Image 
               src={img} 
-              layout="fixed" 
-              width="900" 
-              height="350"
+              layout="intrinsic" 
+              width="500" 
+              height="500"
               objectFit={'scale-down'}
               alt="Primary Image"
               quality={50}
               priority={true}
+              className="image"
             />
           </div>
         )}
