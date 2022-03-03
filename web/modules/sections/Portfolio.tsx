@@ -25,7 +25,7 @@ export default function Portfolio({portfolio, tags}) {
           )}
       </div>
     </div>
-    <div className="row ow-cols-sm-4 row-cols-md-3 ">
+    <div className="row ow-cols-sm-4 row-cols-md-2 row-cols-lg-3">
       {data.length > 0 && data.map(({_id, title, summary, mainImage, slug, tags})=>
         (
           <div key={_id}><InfoCard className='portfolioCard' href={`/portfolio/${slug.current}`} title={title} content={summary} mainImage={mainImage} tags={tags} /></div>
