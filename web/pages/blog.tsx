@@ -19,8 +19,8 @@ const Blog = ({posts}) => {
         title={'Blog'}
         subtitle={'A collection of my written articles'}
       />
-   <div className='text-center'>
-      <div className='row rows-col-sm-4'>
+   <Container className='text-center'>
+      <div className='row row-cols-md-2 row-cols-lg-3'>
       {posts.length > 0 && posts.map(
         ({_id, title = '', slug, publishedAt = '', mainImage, categories}) =>
             (
@@ -39,7 +39,7 @@ const Blog = ({posts}) => {
           )
         )}
       </div>
-    </div>
+    </Container>
     </div>
 
     </Container>  
