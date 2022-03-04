@@ -55,8 +55,7 @@ const Post = (props) => {
 
     <Container wrapperClass=''>
       <div className="row">
-        <div className="col-2"></div>
-        <div className="col-8">
+        <div className="mx-auto col-md-8">
         {post?.content && (
           <PortableText
           value={post.content}
@@ -64,7 +63,6 @@ const Post = (props) => {
           />
           )}
         </div>
-          <div className="col-2"></div>
       </div>
     </Container>
   </>
