@@ -5,7 +5,7 @@ import PropTypes from 'prop-types'
 export default function HeroHeader({title, subtitle, date, tags = [], img, orientation = 'portrait'}) {
   return (
     <div className="row">
-      <div className="mx-auto col-md-8">
+      <div className="mx-auto col-10">
        {title && (
          <h1>{title}</h1>
          )}
