@@ -20,11 +20,11 @@ const Blog = ({posts}) => {
         subtitle={'A collection of my written articles'}
       />
    <div className='text-center'>
-      <div className='row'>
+      <div className='row rows-col-sm-4'>
       {posts.length > 0 && posts.map(
         ({_id, title = '', slug, publishedAt = '', mainImage, categories}) =>
             (
-            <div className='col-lg-4'  key={`${_id}`} >
+            <div  key={`${_id}`} >
               <InfoCard 
                 className='postCard'
                 mainImage={mainImage}

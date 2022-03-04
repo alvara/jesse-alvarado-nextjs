@@ -4,19 +4,7 @@ nav {
   display: flex;
   justify-content: space-between;
 }
-
-// @media (min-width: 768px) {
-//   .navbar-brand.abs
-//       {
-//           position: absolute;
-//           width: auto;
-//           left: 50%;
-//           transform: translateX(-50%);
-//           text-align: center;
-//       }
-//   }
-  
-
+ 
 // make vh 100 including navbar
 .vh-100-w-nav {
   height: calc(100vh - ($nav-link-height + $nav-link-padding-y * 2))
@@ -30,6 +18,6 @@ nav {
   }
 }
 
-#collapseNavbar.show {
+#collapseNavbar {
   text-align: center;
 }
