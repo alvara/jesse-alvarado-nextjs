@@ -1,19 +1,22 @@
 .image-container {
-  height: 54vh;
-  border-radius: 50px !important;
   overflow: hidden;
   position: relative;
-  width: 100%;
-  
+  border-radius: 32px !important;
+  // set fixed height for portrait images (by default), without and height collapses to 0
+  height: 54vh;
+
   @include media-breakpoint-only(xs) {
     // add min height so blog banners can scale down
     height: 40vh;
+
+    // landscape img requires shorter height to fit on mobile
+    &.landscape {
+      height: 30vh;
+    }
   }
-
-
 
   .image {
     height: unset !important;
-    // max-width: 500px !important;
+    max-width: 500px !important;
   }
 }
