@@ -1,8 +1,4 @@
 import type {ReactElement} from 'react'
-import groq from 'groq'
-import PropTypes from "prop-types"
-
-import client from '../client'
 import MainLayout from '../modules/layouts/mainLayout'
 import Container from '../common/Container'
 import HeroHeader from '../modules/sections/HeroHeader'
