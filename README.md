@@ -46,7 +46,7 @@ An in depth description of the project is available [here](https://jessealvarado
 
 ### Built With
 
-Here are the major frameworks/libraries used to power this project.
+Here are the major frameworks/libraries used to power this project:
 
 * Server-side rendering with [Next.js](https://nextjs.org/)
 * Development is in [React.js](https://reactjs.org/)
@@ -116,11 +116,11 @@ Distributed under the MIT License.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTACT -->
-## Contact
+## Contact Author
 
 Jesse Alvarado - contact@jessealvarado.com
 
-Project Link: [https://github.com/your_username/repo_name](https://jessealvarado.com)
+My Site: [jessealvarado.com](https://jessealvarado.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
