@@ -19,7 +19,6 @@
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
 [![Issues][issues-shield]][issues-url]
-[![MIT License][license-shield]][license-url]
 [![LinkedIn][linkedin-shield]][linkedin-url]
 
 <!-- PROJECT LOGO -->
@@ -41,8 +40,7 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-You can read an in depth description of the project [here](https://jessealvarado.com/portfolio/jessealvarado-com)
-
+An in depth description of the project is available [here](https://jessealvarado.com/portfolio/jessealvarado-com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -68,9 +66,10 @@ Here are the major frameworks/libraries used to power this project.
 4. `npm run build` to build to production locally
 
 
-### Installation
+## Installation
 
-Authentification is handled by Sanity. Modify the Sanity Studio Config to use on a different repo.
+Authentification is handled by Sanity. 
+Modify the Sanity Studio Config to use on a different repo.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -85,7 +84,7 @@ Netlify automatically deploys new changes commited to master on GitHub. If you w
 <!-- ROADMAP -->
 ## Roadmap
 
-See the [open issues](https://brillberg2.notion.site/Roadmap-af49ff67f0b34694851e66d3329dfebe) for a full list of proposed features (and known issues).
+See the [roadmap](https://brillberg2.notion.site/Roadmap-af49ff67f0b34694851e66d3329dfebe) for a full list of proposed features (and known issues).
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -110,14 +109,16 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the MIT License. See `LICENSE.txt` for more information.
+Distributed under the MIT License.
+* [View licenses](https://choosealicense.com)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 <!-- CONTACT -->
 ## Contact
 
-Jesse Alvarado - [@your_twitter](https://twitter.com/your_username) - contact@jessealvarado.com
+Jesse Alvarado - contact@jessealvarado.com
 
 Project Link: [https://github.com/your_username/repo_name](https://jessealvarado.com)
 
@@ -128,8 +129,6 @@ Project Link: [https://github.com/your_username/repo_name](https://jessealvarado
 
 Site was inspired by Sanity [sanity.io/create](https://www.sanity.io/create/?template=sanity-io%2Fsanity-template-nextjs-landing-pages).
 
-
-* [Choose an Open Source License](https://choosealicense.com)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
