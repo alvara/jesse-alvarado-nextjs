@@ -3,8 +3,8 @@ $enable-gradients: false;
 $enable-shadows: true;
 
 // Customize Boostrap Body
-$body-bg: hsl(210, 30%, 97%);
-$body-bg-2: darken($body-bg,2%);
+$body-bg: hsl(210, 50%, 100%);
+$body-bg-2: darken($body-bg,0.7%);
 
 // Customize Boostrap Colors
 $primary: #333333;
@@ -13,12 +13,12 @@ $gray-900: #333;
 
 // Customize Bootstrap Typography
 $headings-color: #333;
-$body-color: lighten($headings-color, 8%); // for all text on site
+$body-color: #44403c; // for all text on site
 
 
 $font-family-sans-serif: 'Open Sans', Sans-Serif; // base font
 $headings-font-family: 'Work Sans', Sans-Serif; // headings font
-$font-size-base: 1.1rem;
+$font-size-base: 1.3rem;
 
 // $font-color-primary: rgb(5, 5, 5);
 // $font-color-secondary: rgb(58, 58, 58);
