@@ -32,8 +32,8 @@ export default function MySkills({tags}) {
           <div className='row'>
             <div className='col-12'>
               <div className="table-responsive">
-              <h6>History</h6>
-              <table className="table">
+              <table className="table caption-top">
+              <caption>History At a Glance</caption>
                 <tbody>
                   <tr>
                     <th scope="row">Work Experience</th>
