@@ -1,6 +1,6 @@
 h1 {
   margin-bottom: 32px;
-  font-weight: 100;
+  font-weight: 00;
   text-transform: capitalize;
 } 
 
@@ -12,4 +12,11 @@ h2 {
 strong {
   color: darken(saturate($secondary, 30%),40%);
   font-weight: inherit;
+}
+
+// optional custom heading that appears above typical heading tags
+.preTitle {
+  font-size: 1.6rem;
+  color: lighten($headings-color, 25%);
+  margin: 16px 0 12px 0;
 }

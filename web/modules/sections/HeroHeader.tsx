@@ -2,10 +2,15 @@ import Image from 'next/image'
 import React from 'react'
 import PropTypes from 'prop-types'
 
-export default function HeroHeader({title, subtitle, date, tags = [], img, orientation = 'portrait'}) {
+export default function HeroHeader({preTitle, title, subtitle, date, tags = [], img, orientation = 'portrait'}) {
   return (
     <div className="row">
       <div className="mx-auto col-10">
+
+       {preTitle && (
+         <span className='preTitle'>{preTitle}</span>
+         )}
+         
        {title && (
          <h1>{title}</h1>
          )}
@@ -39,6 +44,7 @@ export default function HeroHeader({title, subtitle, date, tags = [], img, orien
 
 // Define Proptypes for PortfolioItem Component
 HeroHeader.propTypes = {
+  preTitle: PropTypes.string,
   title: PropTypes.string,
   subtitle: PropTypes.string,
   date: PropTypes.string,
