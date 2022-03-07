@@ -10,7 +10,6 @@
 
 .infoCard {
   display: block;
-  
 
   img {
     border-radius: 16px;
@@ -27,16 +26,18 @@
     background-color: white;
     border-radius: 16px;
     padding: 32px;
- 
+    border: 1px solid $border-color;  
+
 
     .infoCard-content {
       padding: 16px;
+
     }
   }
 
   // add to infoBox to transform into a Post Card for your blog
   &.postCard {
- 
+    border: 1px solid $border-color;  
     background-color: white;
     border-radius: 16px;
     margin: 0;
