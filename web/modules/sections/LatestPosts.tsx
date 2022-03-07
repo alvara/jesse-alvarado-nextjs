@@ -6,7 +6,8 @@ import Link from 'next/link'
 export default function LatestPosts({posts}) {
   return (
     <div className='text-center'>
-      <h1>Latest Articles</h1>
+      <span className='preTitle'>Blog</span>
+      <h2>Latest Articles</h2>
       <div className='row'>
       {posts.length > 0 && posts.map(
         ({_id, title = '', slug, publishedAt = '', mainImage, categories = []}) =>

@@ -7,7 +7,10 @@ export default function MySkills({tags}) {
   // filter out only 
   return (
     <div id="about">
-      <h1 className='text-center'>Skills & Experience</h1>
+      <div className='text-center'>
+        <span className='preTitle '>About Me</span>
+        <h2 className='text-center'>Skills & Experience</h2>
+      </div>
       <div className='row'>
         <div className='col-sm-12 col-md-12 col-lg-6'>
           {/* Skill Icons */}
@@ -24,7 +27,6 @@ export default function MySkills({tags}) {
         </div>
         <div className='col-sm-12 col-md-12 col-lg-6'>
           {/* Bio and History */}
-          <h6 className='mt-md-5 mt-lg-0'>About Me</h6>
           <p>I'm a self-driven, team-oriented full stack developer with a background in web development.</p><p>I aim to solve problems and drive results for clients by developing web applications that are fast in performance, flexible in design, and typed in clean code for easy collaboration and maintenance.</p>
           <p>I am currently focused on learning and applying Go(Golang) and Google Cloud Platform (GCP) services to projects that are built on NextJS.</p>
           <div className='row'>

@@ -1,16 +1,17 @@
 h1 {
   margin-bottom: 32px;
-  font-weight: 00;
+  font-weight: 600;
   text-transform: capitalize;
 } 
 
 h2 {
-  font-weight: 100;
+  font-weight: 600;
+  margin-bottom: 32px;
   text-transform: capitalize;
 }
 
 strong {
-  color: darken(saturate($secondary, 30%),40%);
+  color: lighten($primary,30%);
   font-weight: inherit;
 }
 

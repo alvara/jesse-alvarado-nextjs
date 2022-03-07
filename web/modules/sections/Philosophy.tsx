@@ -4,7 +4,7 @@ import InfoCard from '../widgets/InfoCard'
 export default function Philosophy() {
   return (
     <div className="row">
-      <h1 className="text-center mt-5">My <strong>philosophy</strong><br />for developing <strong>applications</strong></h1>
+      <h2 className="text-center mt-5">My <strong>philosophy</strong><br />for developing <strong>applications</strong></h2>
         <div className="col-md-6 col-lg-3">
           <InfoCard 
             title='Result Oriented'

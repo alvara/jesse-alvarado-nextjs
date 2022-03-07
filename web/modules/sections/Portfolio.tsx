@@ -15,7 +15,8 @@ export default function Portfolio({portfolio, tags}) {
 
   return (
     <div id="portfolio" className="h-100 text-center d-flex flex-column justify-content-center">
-    <h1>My <strong>Projects</strong></h1>
+    <span className='preTitle'>My Portfolio</span>
+    <h2>Projects I have Worked On</h2>
     <div className='row'>
       <div className='col'>
           {tags.length > 0 && tags.map(
