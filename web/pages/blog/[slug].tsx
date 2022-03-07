@@ -53,7 +53,7 @@ const Post = (props) => {
       />
     </Container>
 
-    <Container wrapperClass=''>
+    <Container wrapperClass='portableText'>
       <div className="row">
         <div className="mx-auto col-md-8">
         {post?.content && (

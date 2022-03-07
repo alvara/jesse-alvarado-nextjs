@@ -52,7 +52,7 @@ const PortfolioItem = (props) => {
         />
       </Container>
 
-      <Container wrapperClass=''>
+      <Container wrapperClass='portableText'>
         <div className="row">
           <div className="mx-auto col-8">
           {post?.content && (
