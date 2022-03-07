@@ -20,6 +20,9 @@ $font-family-sans-serif: 'Open Sans', Sans-Serif; // base font
 $headings-font-family: 'Work Sans', Sans-Serif; // headings font
 $font-size-base: 1.3rem;
 
+// table and borders
+$border-color: lighten($gray-900, 70%);
+
 // $font-color-primary: rgb(5, 5, 5);
 // $font-color-secondary: rgb(58, 58, 58);
 body {

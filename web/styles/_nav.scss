@@ -3,6 +3,14 @@ nav {
   // color: $white;
   display: flex;
   justify-content: space-between;
+
+  // text in nav
+  .navbar-brand, a.nav-link {
+    font-size: 1rem;
+    font-weight: 900;
+    color: $primary;
+    font-family: 'Work Sans', Sans-Serif;
+  }
 }
  
 // make vh 100 including navbar
