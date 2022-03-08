@@ -39,3 +39,9 @@ strong {
    margin-top: 48px;
   }
 }
+
+a {
+  color: darken(saturate($secondary, 50%), 20%);
+  text-decoration: none;
+  font-weight: 300;
+}
