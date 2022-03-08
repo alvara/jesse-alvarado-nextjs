@@ -12,21 +12,21 @@ export default function Navbar() {
         <div className="collapse navbar-collapse" id="collapseNavbar">
             <ul className="navbar-nav ms-auto">
                 <li className="nav-item active">
-                    <Link href="/#about"><a className="nav-link"  data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">About</a></Link>
+                    <Link href="/#about"><a className="nav-link">About</a></Link>
                 </li>
                 <li className="nav-item">
-                    <Link href="/#portfolio"><a className="nav-link"  data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Portfolio</a></Link>
+                    <Link href="/#portfolio"><a className="nav-link">Portfolio</a></Link>
                 </li>
                 <li className="nav-item">
-                    <Link href="/blog"><a className="nav-link"  data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Blog</a></Link>
+                    <Link href="/blog"><a className="nav-link">Blog</a></Link>
                 </li>
             </ul>
             <ul className="navbar-nav ms-auto">
                 <li className="nav-item">
-                    <Link href="https://github.com/alvara"><a className="nav-link" target={'_blank'} data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">Github</a></Link>
+                    <Link href="https://github.com/alvara"><a className="nav-link" target={'_blank'}>Github</a></Link>
                 </li>
                 <li className="nav-item">
-                    <Link href="https://www.linkedin.com/in/jesse-alvarado/"><a className="nav-link" target={'_blank'} data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">LinkedIn</a></Link>
+                    <Link href="https://www.linkedin.com/in/jesse-alvarado/"><a className="nav-link" target={'_blank'}>LinkedIn</a></Link>
                 </li>
             </ul>
         </div>
