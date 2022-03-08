@@ -22,7 +22,7 @@ nav {
 .navbar-light .navbar-toggler {
   border-color: transparent;
 
-  &:focus {
+  &:focus, &:hover {
     border-color: transparent;
   }
 }
