@@ -3,8 +3,8 @@ import React from 'react'
 
 export default function Navbar() {
   return (
-    <nav className="navbar navbar-expand-md border-bottom">
-    <div className="container">
+    <nav className="navbar navbar-expand-md navbar-light border-bottom">
+    <div className="container-fluid">
      <Link href="/"><a className="navbar-brand">Jesse Alvarado</a></Link>
         <button className="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNavbar" aria-controls="collapseNavbar" aria-expanded="false" aria-label="Toggle navigation">
             <span className="navbar-toggler-icon"></span>

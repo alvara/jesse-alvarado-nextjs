@@ -18,6 +18,14 @@ nav {
   height: calc(100vh - ($nav-link-height + $nav-link-padding-y * 2))
 }
 
+.navbar-light .navbar-toggler {
+  border-color: transparent;
+
+  &:focus {
+    border-color: transparent;
+  }
+}
+
 #collapseNavbar {
   text-align: center;
 }
