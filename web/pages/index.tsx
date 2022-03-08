@@ -11,6 +11,7 @@ import LatestPosts from '../modules/sections/LatestPosts'
 import MySkills from '../modules/sections/MySkills'
 // import ContactMe from '../modules/sections/ContactMe'
 import Container from '../common/Container'
+import Image from "next/image"
 
 // index.js
 export default function Index({posts, portfolio, tags, showcaseTags}) {
@@ -23,6 +24,10 @@ export default function Index({posts, portfolio, tags, showcaseTags}) {
           preTitle={'Hello, I\'m Jesse'}
           title={'I build modern web applications to empower businesses.'}
         />
+        <div className="bg-image-wrapper">        
+          <Image src={'/bg-wood.png'} layout="fill" objectFit={'contain'} alt="Background" quality={50} priority={true} />
+        </div>
+
       </Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><Philosophy /></Container>
       <Container wrapperClass="min-h-100"><Portfolio portfolio={portfolio} tags={tags}/></Container>
