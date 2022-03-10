@@ -12,7 +12,7 @@
   <h3 align="center">Jesse Alvarado's Personal Portfolio Site</h3>
 
   <p align="center">
-    A site that is SSG, built with NextJS and powered by SanityIO to showcase portfolio items and to provide blogging functionality. Deployed on Netlify.
+    An SEO project that was static site generated, built with NextJS and powered by SanityIO to showcase portfolio items and to provide blogging functionality. Deployed on Netlify.
    <br />
    <br />
    <a href="https://jessealvarado.com">View Site</a>
