@@ -33,7 +33,7 @@ You can learn more details about the purpose and development of this project [he
 Here are the major frameworks/libraries used to power this project:
 
 * Server-side rendering with [Next.js](https://nextjs.org/)
-* Development is in [React.js](https://reactjs.org/)
+* Developed in [React.js](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/)
 * Styled with [Bootstrap](https://getbootstrap.com)
 * Content hosted by [SanityIO](https://www.sanity.io/)
 * Continous deployment via [Netlify](https://netlify.com)
