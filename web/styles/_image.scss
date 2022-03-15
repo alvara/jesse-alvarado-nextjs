@@ -28,6 +28,8 @@
   }
 }
 
-.bg-image-wrapper {
+.indexHeader {
   z-index: -1;
+  background-image: url('../public/bg-shapes-min.png');
+  background-size: cover;
 }
