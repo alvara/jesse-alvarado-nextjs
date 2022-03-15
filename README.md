@@ -1,20 +1,5 @@
 <div id="top"></div>
-<!--
-*** Thanks for checking out the Best-README-Template. If you have a suggestion
-*** that would make this better, please fork the repo and create a pull request
-*** or simply open an issue with the tag "enhancement".
-*** Don't forget to give the project a star!
-*** Thanks again! Now go create something AMAZING! :D
--->
 
-<!-- PROJECT SHIELDS -->
-<!--
-*** I'm using markdown "reference style" links for readability.
-*** Reference links are enclosed in brackets [ ] instead of parentheses ( ).
-*** See the bottom of this document for the declaration of the reference variables
-*** for contributors-url, forks-url, etc. This is an optional, concise syntax you may use.
-*** https://www.markdownguide.org/basic-syntax/#reference-style-links
--->
 [![Contributors][contributors-shield]][contributors-url]
 [![Forks][forks-shield]][forks-url]
 [![Stargazers][stars-shield]][stars-url]
@@ -27,7 +12,7 @@
   <h3 align="center">Jesse Alvarado's Personal Portfolio Site</h3>
 
   <p align="center">
-    A site that is SSG, built with NextJS and powered by SanityIO to showcase portfolio items and to provide blogging functionality. Deployed on Netlify.
+    An SEO project that was static site generated, built with NextJS and powered by SanityIO to showcase portfolio items and to provide blogging functionality. Deployed on Netlify.
    <br />
    <br />
    <a href="https://jessealvarado.com">View Site</a>
@@ -40,21 +25,18 @@
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-An in depth description of the project is available [here](https://jessealvarado.com/portfolio/jessealvarado-com)
+You can learn more details about the purpose and development of this project [here](https://jessealvarado.com/portfolio/jessealvarado-com)
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
-### Built With
+## Built With
 
 Here are the major frameworks/libraries used to power this project:
 
 * Server-side rendering with [Next.js](https://nextjs.org/)
-* Development is in [React.js](https://reactjs.org/)
+* Developed in [React.js](https://reactjs.org/) and [Typescript](https://www.typescriptlang.org/)
 * Styled with [Bootstrap](https://getbootstrap.com)
 * Content hosted by [SanityIO](https://www.sanity.io/)
 * Continous deployment via [Netlify](https://netlify.com)
-
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Getting Started
 
@@ -71,15 +53,10 @@ Here are the major frameworks/libraries used to power this project:
 Authentification is handled by Sanity. 
 Modify the Sanity Studio Config to use on a different repo.
 
-<p align="right">(<a href="#top">back to top</a>)</p>
 
 ## Deploy changes
 
 Netlify automatically deploys new changes commited to master on GitHub. If you want to change deployment branch, do so in [build & deploy settings on Netlify](https://www.netlify.com/docs/continuous-deployment/#branches-deploys).
-
-
-<p align="right">(<a href="#top">back to top</a>)</p>
-
 
 <!-- ROADMAP -->
 ## Roadmap
