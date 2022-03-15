@@ -20,12 +20,12 @@ export default function Index({posts, portfolio, tags, showcaseTags}) {
     <>
       <Container wrapperClass="vh-100-w-nav pb-0" className="h-100 text-center d-flex flex-column justify-content-end">
         <HeroHeader 
-          img={'/220308-portrait.png'} 
+          img={'/profile.png'} 
           preTitle={'Hello, I\'m Jesse'}
           title={'I build modern web applications to empower businesses.'}
         />
         <div className="bg-image-wrapper">        
-          <Image src={'/bg-wood.png'} layout="fill" objectFit={'contain'} alt="Background" quality={50} priority={true} />
+          {/* <Image src={'/bg-wood.png'} layout="fill" objectFit={'contain'} alt="Background" quality={50} priority={true} /> */}
         </div>
 
       </Container>
