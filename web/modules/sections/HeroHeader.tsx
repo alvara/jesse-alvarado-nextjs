@@ -33,12 +33,10 @@ export default function HeroHeader({preTitle, title, subtitle, date, tags = [], 
                 // landscape orientation - 
                 <Image  
                   src={img} 
-                  width="800" 
-                  height="500" 
-                  layout="intrinsic" 
-                  objectFit={'cover'} 
+                  layout="fill" 
+                  objectFit={'scale-down'} 
                   alt="Header" 
-                  quality={50} 
+                  quality={45} 
                   priority={true} 
                   placeholder='blur'
                   blurDataURL={img}
