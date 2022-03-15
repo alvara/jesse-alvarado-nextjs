@@ -73,4 +73,4 @@ HeroHeader.propTypes = {
   tags: PropTypes.arrayOf(PropTypes.string),
   img: PropTypes.string,
   orientation: PropTypes.string
-};
+}
