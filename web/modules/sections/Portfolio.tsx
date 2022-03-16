@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 
 import InfoCard from '../widgets/InfoCard'
 export default function Portfolio({portfolio, tags}) {
+  console.log(portfolio)
 
   const [selected, setSelected] = useState("_featured")
 

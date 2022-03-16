@@ -76,13 +76,14 @@ export async function getStaticProps() {
     } | order(publishedAt desc)
   `)
 
-  // Query For Portfolio Tags
+  // Query For Portfolio items
   const portfolio = await client.fetch(groq`
     *[_type == "portfolio"]{
       _id,
       title,
       summary,
       slug,
+      publishedAt,
       "mainImage": mainImage.asset->url,
       "tags": tag[]->{
         title,
@@ -91,7 +92,7 @@ export async function getStaticProps() {
         showcase,
         "image" : image.asset->url
       },
-      "tagList": tag[]->slug
+      "tagList": tag[]->slug,
     } | order(publishedAt desc)
   `)
 
