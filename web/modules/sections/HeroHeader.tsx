@@ -35,9 +35,9 @@ export default function HeroHeader({preTitle, title, subtitle, date, tags = [], 
                  width="800" 
                  height="500" 
                  layout="intrinsic" 
-                 objectFit={'cover'} 
+                 objectFit={'contain'} 
                  alt="Header" 
-                 quality={30} 
+                 quality={50} 
                  priority={true} 
                  placeholder='blur'
                  blurDataURL={img}
@@ -47,8 +47,8 @@ export default function HeroHeader({preTitle, title, subtitle, date, tags = [], 
               //  portrait orientation
               <Image  
                 src={img}  
-                layout="fill" 
-                objectFit={'scale-down'} 
+                layout="fill"
+                objectFit={'contain'} 
                 alt="Header" 
                 quality={60} 
                 priority={true} 
