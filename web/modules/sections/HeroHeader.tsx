@@ -26,9 +26,10 @@ export default function HeroHeader({preTitle, title, subtitle, date, tags = [], 
         {tags.length > 0 && tags.map((tag)=>(
           <span className='pill mini' key={tag}>{tag}</span>
         ))}
-
+        
+        {img && (
           <div className={`image-container d-flex justify-content-center mt-4 rounded ${orientation === 'landscape' ? 'landscape' : ''}`} >
-            {img && orientation === 'landscape' && (
+              {orientation === 'landscape' ? (
                  // landscape orientation - 
                  <Image  
                  src={img} 
@@ -42,20 +43,22 @@ export default function HeroHeader({preTitle, title, subtitle, date, tags = [], 
                  placeholder='blur'
                  blurDataURL={img}
                  className="image"/>
-            )}
-            {img && orientation === 'portrait' && (
+                 ) : (
               //  portrait orientation
               <Image  
                 src={img}  
                 layout="fill"
-                objectFit={'contain'} 
+                objectFit={'scale-down'} 
                 alt="Header" 
                 quality={80} 
                 priority={true} 
+                placeholder='blur'
+                blurDataURL={img}
                 className="image profile"
               />
             )}
           </div>
+          )}
       </div>
     </div>
   )
