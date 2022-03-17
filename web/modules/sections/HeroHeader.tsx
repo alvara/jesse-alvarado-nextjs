@@ -50,10 +50,8 @@ export default function HeroHeader({preTitle, title, subtitle, date, tags = [], 
                 layout="fill"
                 objectFit={'contain'} 
                 alt="Header" 
-                quality={60} 
+                quality={80} 
                 priority={true} 
-                placeholder='blur'
-                blurDataURL={img}
                 className="image profile"
               />
             )}
