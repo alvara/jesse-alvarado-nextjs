@@ -55,7 +55,7 @@ const Post = (props) => {
 
     <Container wrapperClass='portableText'>
       <div className="row">
-        <div className="mx-auto col-md-8">
+        <div className="mx-auto col-md-8 px-4">
         {post?.content && (
           <PortableText
           value={post.content}

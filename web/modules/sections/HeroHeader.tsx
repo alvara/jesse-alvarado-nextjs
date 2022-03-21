@@ -29,34 +29,18 @@ export default function HeroHeader({preTitle, title, subtitle, date, tags = [], 
         
         {img && (
           <div className={`image-container d-flex justify-content-center mt-4 rounded ${orientation === 'landscape' ? 'landscape' : ''}`} >
-              {orientation === 'landscape' ? (
-                 // landscape orientation - 
-                 <Image  
-                 src={img} 
-                 width="800" 
-                 height="500" 
-                 layout="intrinsic" 
-                 objectFit={'contain'} 
-                 alt="Header" 
-                 quality={50} 
-                 priority={true} 
-                 placeholder='blur'
-                 blurDataURL={img}
-                 className="image"/>
-                 ) : (
-              //  portrait orientation
-              <Image  
-                src={img}  
-                layout="fill"
-                objectFit={'scale-down'} 
-                alt="Header" 
-                quality={80} 
-                priority={true} 
-                placeholder='blur'
-                blurDataURL={img}
-                className="image profile"
-              />
-            )}
+            <Image  
+            src={img} 
+            width="800" 
+            height="500" 
+            layout="intrinsic" 
+            objectFit={'contain'} 
+            alt="Header" 
+            quality={50} 
+            priority={true} 
+            placeholder='blur'
+            blurDataURL={img}
+            className="image"/>
           </div>
           )}
       </div>

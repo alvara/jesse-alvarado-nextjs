@@ -13,11 +13,11 @@ $gray-900: #333;
 
 // Customize Bootstrap Typography
 $headings-color: #333;
-$body-color: lighten($headings-color, 10%); // for all text on site
+$body-color: lighten($headings-color,10%); // for all text on site
 
 
-$font-family-sans-serif: 'Open Sans', Sans-Serif; // base font
-$headings-font-family: 'Work Sans', Sans-Serif; // headings font
+$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; // base font
+$headings-font-family: 'Montserrat', sans-serif;// headings font
 $font-size-base: 1.2rem;
 
 // table and borders

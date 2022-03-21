@@ -6,19 +6,24 @@ h1 {
 
 h2 {
   font-weight: 600;
+  padding-bottom: 16px;
   margin-bottom: 24px;
   text-transform: capitalize;
 }
 
+h4 {
+  padding-top: 32px;
+}
+
 strong {
-  color: lighten($primary,30%);
-  font-weight: inherit;
+  color: #000a2d;
+  font-weight: 700;
 }
 
 // optional custom heading that appears above typical heading tags
 .preTitle {
-  font-size: 1.7rem;
-  color: lighten($headings-color, 40%);
+  font-size: 1.6rem;
+  color: lighten($headings-color, 45%);
   margin: 16px 0 8px 0;
   font-family: 'Work Sans', Sans-Serif;
   font-weight: 300;
@@ -37,6 +42,16 @@ strong {
 .portableText {
   h2{
    margin-top: 48px;
+   border-bottom: 1px solid $border-color;
+
+ 
+  }
+
+  h4 {
+    strong {
+      color: lighten($primary, 30%);
+      font-weight: inherit;
+    }
   }
 }
 

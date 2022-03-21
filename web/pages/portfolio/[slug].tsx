@@ -54,7 +54,7 @@ const PortfolioItem = (props) => {
 
       <Container wrapperClass='portableText'>
         <div className="row">
-          <div className="mx-auto col-8">
+          <div className="offset-sm-2 col-8 px-4">
           {post?.content && (
             <PortableText
             value={post.content}

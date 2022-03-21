@@ -29,13 +29,13 @@
 }
 
 .indexHeader {
-  z-index: -1;
-  background-image: url('../public/bg-shapes-min.png');
-  background-size: cover;
+  // background-image: url('../public/bg-shapes-min.png');
+  // z-index: -1;
+  // background-size: cover;
 
   /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-attachment: fixed;
+  // background-position: center;
+  // background-repeat: no-repeat;
+  // background-size: cover;
 }
