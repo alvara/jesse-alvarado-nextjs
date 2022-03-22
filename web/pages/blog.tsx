@@ -13,7 +13,7 @@ import InfoCard from '../modules/widgets/InfoCard'
 const Blog = ({posts}) => {
   return (
     <div>
-      <Container wrapperClass="vh-100-w-nav" className="h-100 text-center">
+      <Container wrapperClass="min-h-100 d-flex align-items-center " className="h-100 text-center">
         <div>
       <HeroHeader 
         title={'Blog'}
