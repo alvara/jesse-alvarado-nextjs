@@ -46,6 +46,7 @@ const PortfolioItem = (props) => {
       <Container wrapperClass="vh-100-w-nav" className="h-100 d-flex align-items-center justify-content-center text-center">
         <HeroHeader 
           img={post?.mainImage} 
+          imgType='hero'
           title={post?.title}
           subtitle={post?.summary}
           tags={post?.tags}

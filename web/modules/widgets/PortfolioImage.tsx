@@ -2,21 +2,21 @@ import React from 'react'
 import Image from 'next/image'
 import PropTypes from 'prop-types'
 
-BlogImage.propTypes = {
+PortfolioImage.propTypes = {
   img: PropTypes.string
 }
 
-export default function BlogImage({img}) {
+export default function PortfolioImage({img}) {
   return (
-    <div className='blog-image-wrapper mt-4'>
+    <div className='portfolio-image-wrapper mt-4'>
       <Image  
         src={img} 
         layout="responsive" 
-        width="700" 
-        height="400" 
-        sizes="650px"
+        width="650" 
+        height="350" 
+        sizes="600px"
         objectFit={'cover'} 
-        alt="Blog Preview" 
+        alt="Portfolio Preview" 
         quality={60} 
         priority={true} 
         placeholder='blur'

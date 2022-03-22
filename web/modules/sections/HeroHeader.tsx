@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import HeroImage from '../widgets/HeroImage'
 import BlogImage from '../widgets/BlogImage'
+import PortfolioImage from '../widgets/PortfolioImage'
 // import BlogImage from '../widgets/BlogImage'
 
 // Define Proptypes for PortfolioItem Component
@@ -18,7 +19,7 @@ HeroHeader.propTypes = {
 export default function HeroHeader({preTitle, title, subtitle, date, tags = [], img, imgType}) {
   return (
     <div className="row">
-      <div className="offset-md-1 col-12 col-sm-10">
+      <div className="offset-md-1 col-12 offset-sm-1 col-sm-10">
 
        {preTitle && (
          <span className='preTitle'>{preTitle}</span>
@@ -41,12 +42,15 @@ export default function HeroHeader({preTitle, title, subtitle, date, tags = [], 
         ))}
         
         {img && imgType === 'hero' && (
-            <HeroImage img={img} />
+          <HeroImage img={img} />
         )}
 
-         
         {img && imgType === 'blog' && (
           <BlogImage img={img} />
+        )}
+
+        {img && imgType === 'portfolio' && (
+          <PortfolioImage img={img} />
         )}
       </div>
     </div>
