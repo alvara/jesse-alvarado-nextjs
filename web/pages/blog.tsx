@@ -27,7 +27,8 @@ const Blog = ({posts}) => {
             <div  key={`${_id}`} >
               <InfoCard 
                 className='postCard'
-                mainImage={mainImage}
+                img={mainImage}
+                imgType={'blog'}
                 href={"/blog/[slug]"}
                 as={`/blog/${slug.current}`} 
                 title={title} 

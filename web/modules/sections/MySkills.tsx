@@ -18,7 +18,15 @@ export default function MySkills({tags}) {
             {tags.map((tag)=>(
             <div key={tag._id} >
               <div className='circle-icon '>
-                <Image src={tag.image} width="100" height="100" layout="responsive" objectFit='scale-down' alt="test" className="p-4"/>
+                <Image 
+                  src={tag.image} 
+                  width="100" 
+                  height="100"
+                  layout="responsive" 
+                  objectFit='scale-down' 
+                  alt="test" 
+                  quality={5}
+                  className="p-4"/>
               </div>
               <h6 className='mb-4 mb-sm-5'>{tag.title}</h6>
             </div>
