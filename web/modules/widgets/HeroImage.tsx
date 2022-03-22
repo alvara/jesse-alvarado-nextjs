@@ -19,8 +19,7 @@ export default function HeroImage({img}) {
         alt="Headshot" 
         quality={60} 
         priority={true} 
-        placeholder='blur'
-        blurDataURL={img}
+        unoptimized={true}   
       />
     </div>
   )
