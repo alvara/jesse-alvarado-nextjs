@@ -1,37 +1,27 @@
-// import React from 'react'
-// import Image from 'next/image'
+import React from 'react'
+import Image from 'next/image'
+import PropTypes from 'prop-types'
 
-// BlogImage.propTypes = {
-//   // preTitle: PropTypes.string,
-//   // title: PropTypes.string,
-//   // subtitle: PropTypes.string,
-//   // date: PropTypes.string,
-//   // tags: PropTypes.arrayOf(PropTypes.string),
-//   // img: PropTypes.string,
-//   // orientation: PropTypes.string
-// }
+BlogImage.propTypes = {
+  img: PropTypes.string
+}
 
-// export default function BlogImage() {
-//   return (
-//     <div>
-//         <Image  
-//           src={img} 
-//           width="800" 
-//           height="500" 
-//           layout="intrinsic" 
-//           objectFit={'cover'} 
-//           alt="Header" 
-//           quality={50} 
-//           priority={true} 
-//           placeholder='blur'
-//           blurDataURL={img}
-//           className="image"
-//         />
-//     </div>
-//   )
-// }
-
-
-
-// add these classes back to the div
-// image-container mx-auto mt-4
+export default function BlogImage({img}) {
+  return (
+    <div className='blog-image-wrapper mt-4'>
+      <Image  
+        src={img} 
+        layout="responsive" 
+        width="650" 
+        height="350" 
+        sizes="650px"
+        objectFit={'cover'} 
+        alt="Blog Preview" 
+        quality={60} 
+        priority={true} 
+        placeholder='blur'
+        blurDataURL={img}
+      />
+    </div>
+  )
+}

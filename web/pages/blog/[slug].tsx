@@ -45,11 +45,11 @@ const Post = (props) => {
     <Container wrapperClass="vh-100-w-nav" className="h-100 d-flex align-items-center justify-content-center text-center">
       <HeroHeader 
         img={post?.mainImage} 
+        imgType='blog'
         title={post?.title}
         subtitle={post?.summary}
         date={post?.publishedAt}
         tags={post?.tags}
-        orientation="landscape"
       />
     </Container>
 
