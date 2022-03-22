@@ -1,8 +1,21 @@
-import Image from 'next/image'
 import React from 'react'
 import PropTypes from 'prop-types'
+import HeroImage from '../widgets/HeroImage'
+// import BlogImage from '../widgets/BlogImage'
 
-export default function HeroHeader({preTitle, title, subtitle, date, tags = [], img, orientation = 'portrait'}) {
+// Define Proptypes for PortfolioItem Component
+HeroHeader.propTypes = {
+  preTitle: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  date: PropTypes.string,
+  tags: PropTypes.arrayOf(PropTypes.string),
+  img: PropTypes.string,
+  imgType: PropTypes.string,
+  orientation: PropTypes.string
+}
+
+export default function HeroHeader({preTitle, title, subtitle, date, tags = [], img, imgType, orientation = 'portrait'}) {
   return (
     <div className="row">
       <div className="mx-auto col-10">
@@ -27,34 +40,11 @@ export default function HeroHeader({preTitle, title, subtitle, date, tags = [], 
           <span className='pill mini' key={tag}>{tag}</span>
         ))}
         
-        {img && (
-          <div className={`image-container d-flex justify-content-center mt-4 rounded ${orientation === 'landscape' ? 'landscape' : ''}`} >
-            <Image  
-            src={img} 
-            width="800" 
-            height="500" 
-            layout="intrinsic" 
-            objectFit={'contain'} 
-            alt="Header" 
-            quality={50} 
-            priority={true} 
-            placeholder='blur'
-            blurDataURL={img}
-            className="image"/>
-          </div>
+        {img && imgType === 'hero' && (
+            <HeroImage img={img} />
           )}
       </div>
     </div>
   )
 }
 
-// Define Proptypes for PortfolioItem Component
-HeroHeader.propTypes = {
-  preTitle: PropTypes.string,
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  date: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string),
-  img: PropTypes.string,
-  orientation: PropTypes.string
-}
