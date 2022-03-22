@@ -17,7 +17,7 @@ export default function PortfolioPreviewImage({img}) {
         sizes="300px"
         objectFit={'contain'} 
         alt="Portfolio Preview" 
-        quality={30} 
+        quality={15} 
         priority={true} 
         placeholder='blur'
         blurDataURL={img}
