@@ -14,16 +14,17 @@ InfoCard.propTypes = {
   img: PropTypes.string,
   imgType: PropTypes.string,
   className: PropTypes.string,
+  imgClassName: PropTypes.string,
   height: PropTypes.number,
   tags : PropTypes.arrayOf(PropTypes.object)
 }
 
-export default function InfoCard({href = '/', as = '', title = '', subtitle = '', content, img = 'https://via.placeholder.com/300x300', imgType, className, tags = [], height = 250}) {
+export default function InfoCard({href = '/', as = '', title = '', subtitle = '', content, img = 'https://via.placeholder.com/300x300', imgType, className, imgClassName, tags = [], height = 250}) {
   const disableLink = href !== '/' ? '' : 'disable-link'
   return (
     <Link href={href} as={as}>
       <a className={`infoCard-wrapper ${disableLink}`}>
-      <div className={`infoCard text-start m-3  ${className}`}>
+      <div className={`infoCard m-3  ${className}`}>
         {img && imgType === 'blog' && (
           <BlogPreviewImage img={img}/>
         )}
@@ -33,7 +34,7 @@ export default function InfoCard({href = '/', as = '', title = '', subtitle = ''
         )}
 
         {img && imgType === 'philosophy' && (
-          <PhilosophyPreviewImage img={img}/>
+          <PhilosophyPreviewImage img={img}  imgClassName={imgClassName}/>
         )}
 
         <div className='infoCard-content'>

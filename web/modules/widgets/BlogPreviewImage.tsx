@@ -3,10 +3,11 @@ import Image from 'next/image'
 import PropTypes from 'prop-types'
 
 BlogPreviewImage.propTypes = {
-  img: PropTypes.string
+  img: PropTypes.string,
+  imgClassName: PropTypes.string,
 }
 
-export default function BlogPreviewImage({img}) {
+export default function BlogPreviewImage({img, imgClassName}) {
   return (
     <div className='blog-image-preview-wrapper'>
       <Image  
@@ -21,6 +22,7 @@ export default function BlogPreviewImage({img}) {
         priority={true} 
         placeholder='blur'
         blurDataURL={img}
+        className={imgClassName}
       />
     </div>
   )
