@@ -9,29 +9,33 @@ export default function Philosophy() {
         <div className="col-md-6 col-lg-3">
           <InfoCard 
             title='Result Oriented'
-            content='I focus on the end result first, building prioritized features with an iterative approach to quickly deliver.'
-            mainImage='/result-oriented.jpg'
+            subtitle='I focus on the end result first, building prioritized features with an iterative approach to quickly deliver.'
+            img='/result-oriented.jpg'
+            imgType='philosophy'
           />
         </div>
         <div className="col-md-6 col-lg-3">
           <InfoCard 
             title='Team Player'
-            content='I use clear communication, well documented code, and and an open mindset to make working with teams a productive experience.'
-            mainImage='/team-player.jpg'
+            subtitle='I use clear communication, well documented code, and and an open mindset to make working with teams a productive experience.'
+            img='/team-player.jpg'
+            imgType='philosophy'
           />
         </div>
         <div className="col-md-6 col-lg-3">
           <InfoCard 
             title='Clean Design'
-            content='I am passionate about creating beautiful web apps that users can easily understand and enjoy.'
-            mainImage='/clean-design.jpg'
+            subtitle='I am passionate about creating beautiful web apps that users can easily understand and enjoy.'
+            img='/clean-design.jpg'
+            imgType='philosophy'
           />
         </div>
         <div className="col-md-6 col-lg-3">
           <InfoCard 
             title='Modern Stack'
-            content='I am never afraid to utilize new frameworks and tools to take advantage of the latest advancements in technology.'
-            mainImage='/modern-stack.jpg'
+            subtitle='I am never afraid to utilize new frameworks and tools to take advantage of the latest advancements in technology.'
+            img='/modern-stack.jpg'
+            imgType='philosophy'
          />
         </div>
       </div>

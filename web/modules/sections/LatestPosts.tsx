@@ -15,13 +15,14 @@ export default function LatestPosts({posts}) {
             <div className='col-lg-4'  key={_id} >
               <InfoCard 
                 className='postCard'
-                mainImage={mainImage}
+                img={mainImage}
+                imgType='blog'
                 href={"/blog/[slug]"}
                 as={`/blog/${slug.current}`} 
                 title={title} 
                 subtitle={new Date(publishedAt).toDateString()}
                 tags={categories}
-                height={140}
+                height={120}
               />
             </div>
           )

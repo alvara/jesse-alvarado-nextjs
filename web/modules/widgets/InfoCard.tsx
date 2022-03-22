@@ -1,27 +1,41 @@
-import Image from 'next/image'
 import React from 'react'
 import Link from 'next/link'
 import PropTypes from 'prop-types'
+import BlogPreviewImage from './BlogPreviewImage'
+import PortfolioPreviewImage from './PortfolioPreviewImage'
+import PhilosophyPreviewImage from './PhilosophyPreviewImage'
 
-export default function InfoCard({href = '/', as = '', title = '', subtitle = '', content, mainImage = 'https://via.placeholder.com/300x300', className, tags = [], height = 250}) {
+InfoCard.propTypes = {
+  href: PropTypes.string,
+  as: PropTypes.string,
+  title: PropTypes.string,
+  subtitle: PropTypes.string,
+  content: PropTypes.string,
+  img: PropTypes.string,
+  imgType: PropTypes.string,
+  className: PropTypes.string,
+  height: PropTypes.number,
+  tags : PropTypes.arrayOf(PropTypes.object)
+}
+
+export default function InfoCard({href = '/', as = '', title = '', subtitle = '', content, img = 'https://via.placeholder.com/300x300', imgType, className, tags = [], height = 250}) {
   const disableLink = href !== '/' ? '' : 'disable-link'
   return (
     <Link href={href} as={as}>
       <a className={`infoCard-wrapper ${disableLink}`}>
       <div className={`infoCard text-start m-3  ${className}`}>
-        <Image 
-          src={mainImage} 
-          width="250" 
-          height={height} 
-          layout="responsive" 
-          objectFit='scale-down' 
-          alt="test" 
-          className="" 
-          quality={30} 
-          placeholder='blur'
-          blurDataURL={mainImage}
-          priority
-        />
+        {img && imgType === 'blog' && (
+          <BlogPreviewImage img={img}/>
+        )}
+
+        {img && imgType === 'portfolio' && (
+          <PortfolioPreviewImage img={img}/>
+        )}
+
+        {img && imgType === 'philosophy' && (
+          <PhilosophyPreviewImage img={img}/>
+        )}
+
         <div className='infoCard-content'>
           <h5 className='pt-3'>{title}</h5>
           <span className='subTitle'>{subtitle}</span>
@@ -36,14 +50,3 @@ export default function InfoCard({href = '/', as = '', title = '', subtitle = ''
   )
 }
 
-InfoCard.propTypes = {
-  href: PropTypes.string,
-  as: PropTypes.string,
-  title: PropTypes.string,
-  subtitle: PropTypes.string,
-  content: PropTypes.string,
-  mainImage: PropTypes.string,
-  className: PropTypes.string,
-  height: PropTypes.number,
-  tags : PropTypes.arrayOf(PropTypes.object)
-}
