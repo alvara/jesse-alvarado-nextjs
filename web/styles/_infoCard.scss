@@ -19,6 +19,7 @@
     font-weight: 900;
     text-decoration: none;
     font-size: 1.2rem;
+    min-height: 60px;
   }
 
   // add to infoBox to transform into a Porfolio Card
@@ -37,7 +38,6 @@
 
     .infoCard-content {
       padding: 16px;
-
     }
   }
 

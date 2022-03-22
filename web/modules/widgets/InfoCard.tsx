@@ -38,12 +38,16 @@ export default function InfoCard({href = '/', as = '', title = '', subtitle = ''
         )}
 
         <div className='infoCard-content'>
-          <h5 className='pt-3'>{title}</h5>
-          <span className='subTitle'>{subtitle}</span>
-          <p>{content}</p>
-          {tags.length > 0 && tags.map((tag)=>(
-            <span className='pill mini' key={tag._id}>{tag.title}</span>
-          ))}
+          <div>
+            <h5 className='pt-3'>{title}</h5>
+            <span className='subTitle'>{subtitle}</span>
+            <p>{content}</p>
+          </div>
+          <div>
+            {tags.length > 0 && tags.map((tag)=>(
+              <span className='pill mini' key={tag._id}>{tag.title}</span>
+            ))}
+          </div>
         </div>
       </div>
       </a>
