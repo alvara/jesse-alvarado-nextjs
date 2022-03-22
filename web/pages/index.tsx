@@ -22,7 +22,7 @@ export default function Index({posts, portfolio, tags, showcaseTags}) {
           img={'/profile5.png'} 
           imgType='hero'
           preTitle={'Hello, I\'m Jesse'}
-          title={'I build modern web applications to empower businesses.'}
+          title={'I build modern web applications to empower businesses'}
         />
       </Container>
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2"><Philosophy /></Container>
