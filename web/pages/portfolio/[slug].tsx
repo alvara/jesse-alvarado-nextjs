@@ -43,7 +43,7 @@ const PortfolioItem = (props) => {
         {/* TODO: add description to schema and insert here for each post */}
       </Head>
 
-      <Container wrapperClass="vh-100-w-nav" className="h-100 d-flex align-items-center justify-content-center text-center">
+      <Container wrapperClass="vh-100-w-nav" className="h-100 d-flex align-items-center justify-content-center text-center px-4">
         <HeroHeader 
           img={post?.mainImage} 
           imgType='hero'
@@ -55,7 +55,7 @@ const PortfolioItem = (props) => {
 
       <Container wrapperClass='portableText'>
         <div className="row">
-          <div className="offset-sm-2 col-8 px-4">
+          <div className="col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 px-4">
           {post?.content && (
             <PortableText
             value={post.content}
