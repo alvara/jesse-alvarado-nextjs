@@ -10,10 +10,9 @@
 .hero-image-wrapper {
   display: block;
   margin: auto;
-  max-width: 560px;
-
-  @include media-breakpoint-up(sm) { max-width: 260px; }
-  @include media-breakpoint-up(lg) { max-width: 460px; }
+  max-width: 560px; /* mobile */
+  @include media-breakpoint-up(sm) { max-width: 260px; } /* tablets /laptop */
+  @include media-breakpoint-up(lg) { max-width: 460px; } /* desktop */
 
   img {
     filter: saturate(1.1);
