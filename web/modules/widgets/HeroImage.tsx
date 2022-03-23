@@ -8,7 +8,7 @@ HeroImage.propTypes = {
 
 export default function HeroImage({img}) {
   return (
-    <div className='hero-image-wrapper'>
+    <div className='hero-image-wrapper bg-transparent'>
       <Image  
         src={img}  
         layout="responsive"
@@ -20,6 +20,7 @@ export default function HeroImage({img}) {
         quality={60} 
         priority={true} 
         unoptimized={true}   
+        className='bg-transparent'
       />
     </div>
   )

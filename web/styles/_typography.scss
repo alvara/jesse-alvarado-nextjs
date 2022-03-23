@@ -23,7 +23,7 @@ strong {
 // optional custom heading that appears above typical heading tags
 .preTitle {
   font-size: 1.6rem;
-  color: #858585;
+  color: #525252;
   margin: 16px 0 8px 0;
   font-family: 'Work Sans', Sans-Serif;
   font-weight: 300;
@@ -32,7 +32,7 @@ strong {
 // optional custom heading that appears below typical heading tags
 .subTitle {
   font-size: 1.1rem;
-  color: lighten($headings-color, 25%);
+  color: #525252;
   margin: 16px 0 12px 0;
   font-family: 'Work Sans', Sans-Serif;
   font-weight: 300;
@@ -49,14 +49,18 @@ strong {
 
   h4 {
     strong {
-      color: lighten($primary, 30%);
+      color: #545454;
       font-weight: inherit;
     }
   }
 }
 
 a {
-  color: darken(saturate($secondary, 50%), 25%);
+  color: #2545a7;
   text-decoration: none;
   font-weight: 300;
+}
+
+code {
+  color: #94004a;
 }

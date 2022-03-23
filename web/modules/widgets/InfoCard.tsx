@@ -39,7 +39,7 @@ export default function InfoCard({href = '/', as = '', title = '', subtitle = ''
 
         <div className='infoCard-content'>
           <div>
-            <h5 className='pt-3'>{title}</h5>
+            <h3 className='pt-3'>{title}</h3>
             <span className='subTitle'>{subtitle}</span>
             <p>{content}</p>
           </div>

@@ -28,7 +28,7 @@ export default function MySkills({tags}) {
                   quality={5}
                   className="p-4"/>
               </div>
-              <h6 className='mb-4 mb-sm-5'>{tag.title}</h6>
+              <h3 className='icon-title mb-4 mb-sm-5'>{tag.title}</h3>
             </div>
             ))}
           </div>

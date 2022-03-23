@@ -11,6 +11,7 @@
   display: block;
   margin: auto;
   max-width: 560px;
+
 }
 
 .portfolio-image-wrapper {
@@ -51,4 +52,20 @@
 //     background: rgb(246, 249, 252);
 //     transform: rotate(29deg) skewX(-30deg);
 //     z-index: -1;
+// }
+
+
+// [id="__next"] > main > div:nth-child(1) > div > div:nth-child(1) > div > div > span {
+//     background-color: inherit !important;
+//     color: inherit !important;
+// }
+
+// span {
+//     background-color: red !important;
+//     color: red !important;
+// }
+
+// body, html {
+//   background-color: white;
+//   color: black !important;
 // }
