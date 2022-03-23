@@ -12,10 +12,12 @@
   margin: auto;
   max-width: 560px;
 
+  @include media-breakpoint-up(sm) { max-width: 260px; }
+  @include media-breakpoint-up(lg) { max-width: 460px; }
+
   img {
     filter: saturate(1.1);
   }
-
 }
 
 .portfolio-image-wrapper {
