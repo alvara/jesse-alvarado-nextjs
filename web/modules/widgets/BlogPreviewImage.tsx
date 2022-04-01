@@ -18,7 +18,7 @@ export default function BlogPreviewImage({img, imgClassName}) {
         sizes="300px"
         objectFit={'cover'}
         alt="Blog Preview"
-        quality={20}
+        quality={12}
         priority={true}
         placeholder="blur"
         blurDataURL={img}
