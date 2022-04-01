@@ -24,7 +24,7 @@ export default function MySkills({tags}) {
                   height="100"
                   layout="responsive" 
                   objectFit='scale-down' 
-                  alt="test" 
+                  alt="skill icon" 
                   quality={5}
                   className="p-4"/>
               </div>
