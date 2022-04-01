@@ -16,42 +16,52 @@ InfoCard.propTypes = {
   className: PropTypes.string,
   imgClassName: PropTypes.string,
   height: PropTypes.number,
-  tags : PropTypes.arrayOf(PropTypes.object)
+  tags: PropTypes.arrayOf(PropTypes.object),
 }
 
-export default function InfoCard({href = '/', as = '', title = '', subtitle = '', content, img = 'https://via.placeholder.com/300x300', imgType, className, imgClassName, tags = [], height = 250}) {
+export default function InfoCard({
+  href = '/',
+  as = '',
+  title = '',
+  subtitle = '',
+  content,
+  img = 'https://via.placeholder.com/300x300',
+  imgType,
+  className,
+  imgClassName,
+  tags = [],
+  height = 250,
+}) {
   const disableLink = href !== '/' ? '' : 'disable-link'
   return (
     <Link href={href} as={as}>
       <a className={`infoCard-wrapper ${disableLink}`}>
-      <div className={`infoCard m-3  ${className}`}>
-        {img && imgType === 'blog' && (
-          <BlogPreviewImage img={img}/>
-        )}
+        <div className={`infoCard m-3  ${className}`}>
+          {img && imgType === 'blog' && <BlogPreviewImage img={img} />}
 
-        {img && imgType === 'portfolio' && (
-          <PortfolioPreviewImage img={img}/>
-        )}
+          {img && imgType === 'portfolio' && <PortfolioPreviewImage img={img} />}
 
-        {img && imgType === 'philosophy' && (
-          <PhilosophyPreviewImage img={img}  imgClassName={imgClassName}/>
-        )}
+          {img && imgType === 'philosophy' && (
+            <PhilosophyPreviewImage img={img} imgClassName={imgClassName} />
+          )}
 
-        <div className='infoCard-content'>
-          <div>
-            <h3 className='pt-3'>{title}</h3>
-            <span className='subTitle'>{subtitle}</span>
-            <p>{content}</p>
-          </div>
-          <div>
-            {tags.length > 0 && tags.map((tag)=>(
-              <span className='pill mini' key={tag._id}>{tag.title}</span>
-            ))}
+          <div className="infoCard-content">
+            <div>
+              <h3 className="pt-3">{title}</h3>
+              <span className="subTitle">{subtitle}</span>
+              <p>{content}</p>
+            </div>
+            <div>
+              {tags.length > 0 &&
+                tags.map((tag) => (
+                  <span className="pill mini" key={tag._id}>
+                    {tag.title}
+                  </span>
+                ))}
+            </div>
           </div>
         </div>
-      </div>
       </a>
     </Link>
   )
 }
-

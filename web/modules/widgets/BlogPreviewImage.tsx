@@ -9,18 +9,18 @@ BlogPreviewImage.propTypes = {
 
 export default function BlogPreviewImage({img, imgClassName}) {
   return (
-    <div className='blog-image-preview-wrapper'>
-      <Image  
-        src={img} 
-        layout="responsive" 
-        width="300" 
-        height="150" 
+    <div className="blog-image-preview-wrapper">
+      <Image
+        src={img}
+        layout="responsive"
+        width="300"
+        height="150"
         sizes="300px"
-        objectFit={'cover'} 
-        alt="Blog Preview" 
-        quality={20} 
-        priority={true} 
-        placeholder='blur'
+        objectFit={'cover'}
+        alt="Blog Preview"
+        quality={20}
+        priority={true}
+        placeholder="blur"
         blurDataURL={img}
         className={imgClassName}
       />

@@ -10,17 +10,17 @@ PhilosophyPreviewImage.propTypes = {
 export default function PhilosophyPreviewImage({img, imgClassName}) {
   return (
     <div className={`philosophy-image-preview-wrapper ${imgClassName}`}>
-      <Image  
-        src={img} 
-        layout="responsive" 
-        width="125" 
-        height="125" 
+      <Image
+        src={img}
+        layout="responsive"
+        width="125"
+        height="125"
         sizes="125px"
-        objectFit={'cover'} 
-        alt="Blog Preview" 
-        quality={30} 
-        priority={true} 
-        placeholder='blur'
+        objectFit={'cover'}
+        alt="Blog Preview"
+        quality={25}
+        priority={true}
+        placeholder="blur"
         blurDataURL={img}
       />
     </div>

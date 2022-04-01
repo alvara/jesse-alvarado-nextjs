@@ -3,24 +3,22 @@ import Image from 'next/image'
 import PropTypes from 'prop-types'
 
 PortfolioImage.propTypes = {
-  img: PropTypes.string
+  img: PropTypes.string,
 }
 
 export default function PortfolioImage({img}) {
   return (
-    <div className='portfolio-image-wrapper mt-4'>
-      <Image  
-        src={img} 
-        layout="responsive" 
-        width="650" 
-        height="350" 
+    <div className="portfolio-image-wrapper mt-4">
+      <Image
+        src={img}
+        layout="responsive"
+        width="650"
+        height="350"
         sizes="600px"
-        objectFit={'cover'} 
-        alt="Portfolio Preview" 
-        quality={60} 
-        priority={true} 
-        placeholder='blur'
-        blurDataURL={img}
+        objectFit={'cover'}
+        alt="Portfolio Preview"
+        quality={60}
+        priority={true}
       />
     </div>
   )
