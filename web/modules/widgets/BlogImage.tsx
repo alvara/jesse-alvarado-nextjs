@@ -17,7 +17,7 @@ export default function BlogImage({img}) {
         sizes="650px"
         objectFit={'cover'}
         alt="Blog Preview"
-        quality={60}
+        quality={50}
         priority={true}
       />
     </div>

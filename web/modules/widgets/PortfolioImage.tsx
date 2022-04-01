@@ -17,7 +17,7 @@ export default function PortfolioImage({img}) {
         sizes="600px"
         objectFit={'cover'}
         alt="Portfolio Preview"
-        quality={60}
+        quality={50}
         priority={true}
       />
     </div>
