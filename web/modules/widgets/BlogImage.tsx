@@ -11,10 +11,9 @@ export default function BlogImage({img}) {
     <div className="blog-image-wrapper mt-4">
       <Image
         src={img}
-        layout="responsive"
+        layout="intrinsic"
         width="700"
         height="400"
-        sizes="650px"
         objectFit={'cover'}
         alt="Blog Preview"
         quality={50}

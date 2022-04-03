@@ -12,10 +12,9 @@ export default function PhilosophyPreviewImage({img, imgClassName}) {
     <div className={`philosophy-image-preview-wrapper ${imgClassName}`}>
       <Image
         src={img}
-        layout="responsive"
+        layout="intrinsic"
         width="125"
         height="125"
-        sizes="125px"
         objectFit={'cover'}
         alt="Blog Preview"
         quality={25}
