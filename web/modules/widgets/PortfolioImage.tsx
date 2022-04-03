@@ -11,10 +11,9 @@ export default function PortfolioImage({img}) {
     <div className="portfolio-image-wrapper mt-4">
       <Image
         src={img}
-        layout="responsive"
+        layout="intrinsic"
         width="650"
         height="350"
-        sizes="600px"
         objectFit={'cover'}
         alt="Portfolio Preview"
         quality={50}

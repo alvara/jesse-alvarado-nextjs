@@ -11,14 +11,12 @@ export default function PortfolioPreviewImage({img}) {
     <div className="portfolio-image-preview-wrapper mt-4">
       <Image
         src={img}
-        layout="responsive"
+        layout="intrinsic"
         width="300"
         height="200"
-        sizes="300px"
         objectFit={'contain'}
         alt="Portfolio Preview"
         quality={12}
-        priority={true}
       />
     </div>
   )
