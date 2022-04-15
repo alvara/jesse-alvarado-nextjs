@@ -9,7 +9,7 @@ import client from '../../client'
 import getSanityImgUrl from '../../utils/getSanityImgUrl'
 import Head from 'next/head'
 import Container from '../../common/Container'
-import HeroHeader from '../../modules/sections/HeroHeader'
+import Header from '../../modules/sections/Header'
 
 const ptComponents = {
   types: {
@@ -42,7 +42,7 @@ const Post = (props) => {
         wrapperClass=""
         className="h-100 d-flex align-items-center justify-content-center text-center"
       >
-        <HeroHeader
+        <Header
           img={post?.mainImage}
           imgType="blog"
           title={post?.title}

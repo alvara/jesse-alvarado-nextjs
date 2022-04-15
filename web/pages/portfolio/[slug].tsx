@@ -9,7 +9,7 @@ import MainLayout from '../../modules/layouts/mainLayout'
 import client from '../../client'
 import getSanityImgUrl from '../../utils/getSanityImgUrl'
 import Container from '../../common/Container'
-import HeroHeader from '../../modules/sections/HeroHeader'
+import Header from '../../modules/sections/Header'
 
 // Configure Portable Text
 const ptComponents = {
@@ -44,7 +44,7 @@ const PortfolioItem = (props) => {
         wrapperClass=""
         className="d-flex align-items-center justify-content-center text-center px-4"
       >
-        <HeroHeader
+        <Header
           img={post?.mainImage}
           imgType="hero"
           title={post?.title}
