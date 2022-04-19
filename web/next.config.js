@@ -5,6 +5,6 @@
 module.exports = {
   images: {
     formats: ['image/webp'],
-    domains: ['via.placeholder.com','cdn.sanity.io']
+    domains: ['via.placeholder.com', 'cdn.sanity.io'],
   },
 }

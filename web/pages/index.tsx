@@ -12,20 +12,24 @@ import MySkills from '../modules/sections/MySkills'
 // import ContactMe from '../modules/sections/ContactMe'
 import Container from '../common/Container'
 
+import Particles from 'react-tsparticles'
+
 // index.js
 export default function Index({posts, portfolio, tags, showcaseTags}) {
   return (
     <>
       <Container
-        wrapperClass="index-header min-h-100 d-flex justify-content-center align-items-center"
+        wrapperClass="index-header min-h-100 d-flex justify-content-center align-items-center position-relative"
         className="text-center"
       >
         <Header
           preTitle={"Hello, I'm Jesse"}
           title={'I build modern web applications to empower businesses'}
         />
-        <div className="bg-style"></div>
+
+        <Particles url="/particles.json" />
       </Container>
+
       <Container wrapperClass="min-h-100 d-flex align-items-center bg-2">
         <Philosophy />
       </Container>
