@@ -1,0 +1,92 @@
+// Bootstrap Global Options
+$enable-gradients: false;
+$enable-shadows: true;
+
+// Customize Boostrap Body
+$body-bg: hsl(210, 20%, 100%);
+$body-bg-2: darken($body-bg, 1.2%);
+
+// Customize Boostrap Colors
+$primary: #333333;
+$secondary: #ccced4;
+$gray-900: #333;
+
+// Customize Bootstrap Typography
+$headings-color: #333;
+$body-color: lighten($headings-color, 10%); // for all text on site
+
+$font-family-sans-serif: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial,
+  sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; // base font
+$headings-font-family: 'Montserrat', sans-serif; // headings font
+$font-size-base: 1.2rem;
+
+// table and borders
+$border-color: lighten($gray-900, 73%);
+$card-shadow: 0 5px 17px -6px rgb(0 0 0 / 10%);
+
+// $font-color-primary: rgb(5, 5, 5);
+// $font-color-secondary: rgb(58, 58, 58);
+body {
+  /*  expand body to fill page heigth  */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+// Bootstrap Configuration (Required)
+@import 'bootstrap/scss/functions';
+@import 'bootstrap/scss/variables';
+@import 'bootstrap/scss/mixins';
+@import 'bootstrap/scss/utilities';
+
+// Bootstrap Layout & components
+@import 'bootstrap/scss/root';
+@import 'bootstrap/scss/reboot';
+@import 'bootstrap/scss/type';
+@import 'bootstrap/scss/images';
+@import 'bootstrap/scss/containers';
+@import 'bootstrap/scss/grid';
+@import 'bootstrap/scss/tables';
+// @import "bootstrap/scss/forms";
+// @import "bootstrap/scss/buttons";
+@import 'bootstrap/scss/transitions';
+// @import "bootstrap/scss/dropdown";
+// @import "bootstrap/scss/button-group";
+@import 'bootstrap/scss/nav';
+@import 'bootstrap/scss/navbar';
+// @import "bootstrap/scss/card";
+// @import "bootstrap/scss/accordion";
+// @import "bootstrap/scss/breadcrumb";
+// @import "bootstrap/scss/pagination";
+// @import "bootstrap/scss/badge";
+// @import "bootstrap/scss/alert";
+// @import "bootstrap/scss/progress";
+// @import "bootstrap/scss/list-group";
+// @import "bootstrap/scss/close";
+// @import "bootstrap/scss/toasts";
+// @import "bootstrap/scss/modal";
+// @import "bootstrap/scss/tooltip";
+// @import "bootstrap/scss/popover";
+// @import "bootstrap/scss/carousel";
+// @import "bootstrap/scss/spinners";
+// @import "bootstrap/scss/offcanvas";
+// @import "bootstrap/scss/placeholders";
+
+// Bootstrap Helpers
+@import 'bootstrap/scss/helpers';
+
+// Bootstrap Utilities
+@import 'bootstrap/scss/utilities/api';
+
+// custom styles
+@import 'image';
+@import 'header';
+@import 'typography';
+@import 'button';
+@import 'spacing';
+@import 'container';
+@import 'nav';
+@import 'table';
+@import 'pill';
+@import 'infoCard';
+@import 'icon';
