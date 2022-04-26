@@ -22,7 +22,8 @@ const ptComponents = {
         <img
           alt={value.alt || ' '}
           loading="lazy"
-          src={getSanityImgUrl(value).width(320).height(240).fit('max').auto('format').url()}
+          src={getSanityImgUrl(value).toString()}
+          className="portable-image"
         />
       )
     },
