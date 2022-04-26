@@ -32,14 +32,10 @@ const Post = (props) => {
   const post = props.post
   return (
     <>
-      <Head>
-        {post?.title && <title>{post.title}</title>}
-
-        {/* TODO: add description to schema and insert here for each post */}
-      </Head>
+      <Head>{post?.title && <title>{post.title}</title>}</Head>
 
       <Container
-        wrapperClass="index-header"
+        wrapperClass="pb-0"
         className="h-100 d-flex align-items-center justify-content-center text-center"
       >
         <Header
@@ -54,7 +50,7 @@ const Post = (props) => {
 
       <Container wrapperClass="portableText">
         <div className="row">
-          <div className="mx-auto col-md-8 px-4">
+          <div className="col-md-12 offset-lg-2 col-lg-8">
             {post?.content && <PortableText value={post.content} components={ptComponents} />}
           </div>
         </div>

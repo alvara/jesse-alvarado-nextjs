@@ -34,8 +34,8 @@ export default function Header({preTitle, title, subtitle, date, tags = [], img,
             </span>
           ))}
 
+        {/* Choose correct image component to display */}
         {img && imgType === 'blog' && <BlogImage img={img} />}
-
         {img && imgType === 'portfolio' && <PortfolioImage img={img} />}
       </div>
     </div>
