@@ -9,7 +9,7 @@ import MainLayout from '../../modules/layouts/mainLayout'
 import client from '../../client'
 import getSanityImgUrl from '../../utils/getSanityImgUrl'
 import Container from '../../common/Container'
-import HeroHeader from '../../modules/sections/HeroHeader'
+import Header from '../../modules/sections/Header'
 
 // Configure Portable Text
 const ptComponents = {
@@ -22,7 +22,8 @@ const ptComponents = {
         <img
           alt={value.alt || ' '}
           loading="lazy"
-          src={getSanityImgUrl(value).width(320).height(240).fit('max').auto('format').url()}
+          src={getSanityImgUrl(value).toString()}
+          className="portable-image"
         />
       )
     },
@@ -34,19 +35,15 @@ const PortfolioItem = (props) => {
   const post = props.post
   return (
     <>
-      <Head>
-        {post?.title && <title>{post.title}</title>}
-
-        {/* TODO: add description to schema and insert here for each post */}
-      </Head>
+      <Head>{post?.title && <title>{post.title}</title>}</Head>
 
       <Container
-        wrapperClass=""
+        wrapperClass="pb-0"
         className="d-flex align-items-center justify-content-center text-center px-4"
       >
-        <HeroHeader
+        <Header
           img={post?.mainImage}
-          imgType="hero"
+          imgType="portfolio"
           title={post?.title}
           subtitle={post?.summary}
           tags={post?.tags}
@@ -55,7 +52,7 @@ const PortfolioItem = (props) => {
 
       <Container wrapperClass="portableText">
         <div className="row">
-          <div className="col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 px-4">
+          <div className="col-12 col-sm-12 offset-lg-2 col-lg-8">
             {post?.content && <PortableText value={post.content} components={ptComponents} />}
           </div>
         </div>

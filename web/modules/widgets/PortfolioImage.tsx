@@ -12,9 +12,9 @@ export default function PortfolioImage({img}) {
       <Image
         src={img}
         layout="intrinsic"
-        width="650"
-        height="350"
-        objectFit={'cover'}
+        width="700"
+        height="400"
+        objectFit={'contain'}
         alt="Portfolio Preview"
         quality={50}
         priority={true}
