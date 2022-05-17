@@ -38,15 +38,14 @@ export default function MySkills({tags}) {
           {/* Bio and History */}
           <p>I&apos;m a self-driven, team-oriented software engineer based in Tokyo.</p>
           <p>
-            What attracted me to software development is in how web technology can be utilized to
-            solve problems for people and businesses.
+            I am fascinated with web technology and on how it can be utilized to solve issues for
+            businesses and create value.
           </p>
           <p>
-            I am currently focused on building websites and applications with a Jamstack
+            I am currently focused on building websites and web applications with a Jamstack
             architecture, utilizing NextJS, Netlify, and various headless CMS such as SanityIO and
-            Supabase.{' '}
+            Supabase to power the backend.
           </p>
-          <p>I build</p>
           <div className="row">
             <div className="col-12">
               <div className="table-responsive">
