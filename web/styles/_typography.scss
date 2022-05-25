@@ -2,7 +2,7 @@ h1 {
   margin-bottom: 32px;
   font-weight: 600;
   text-transform: capitalize;
-} 
+}
 
 h2 {
   font-weight: 600;
@@ -16,7 +16,7 @@ h4 {
 }
 
 strong {
-  color: #000a2d;
+  color: $primary;
   font-weight: 600;
 }
 
@@ -40,11 +40,9 @@ strong {
 
 //  styles for content generated from portableText
 .portableText {
-  h2{
-   margin-top: 48px;
-   border-bottom: 1px solid $border-color;
-
- 
+  h2 {
+    margin-top: 48px;
+    border-bottom: 1px solid $border-color;
   }
 
   h4 {
