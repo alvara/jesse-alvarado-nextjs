@@ -25,6 +25,9 @@
 
 .portable-image {
   width: 100%;
+  max-height: 20em;
+  object-fit: scale-down;
+  margin: 2em auto;
 }
 
 // .indexHeader {
